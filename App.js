@@ -4,16 +4,21 @@ import Header from './app/components/Header';
 import Home from './app/screens/Home';
 import ItemListCategory from './app/screens/ItemListCategory';
 import ItemDetail from './app/screens/ItemDetail.jsx';
+import { useState } from 'react';
 
 
 export default function App() {
+  const [categorySelected, setCategorySelected] = useState("");
 
   return (
     <View style={styles.container}>
       <Header title={"FitApp"} />
-      <Home />
-      <ItemListCategory />
-      <ItemDetail />
+      {!categorySelected ? (
+        <Home setCategorySelected={setCategorySelected} />
+      ) : (
+        <ItemListCategory categorySelected={categorySelected} setCategorySelected={setCategorySelected} />
+      )}
+      {/*       <ItemDetail /> */}
     </View>
   );
 }
