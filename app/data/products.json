@@ -18,6 +18,38 @@
     },
     {
         "id": 2,
+        "title": "Entrenamiento Personalizado 3 Meses",
+        "description": "Plan de entrenamiento personalizado por tres meses con seguimiento semanal.",
+        "price": 249.99,
+        "discountPercentage": 15,
+        "rating": 4.9,
+        "stock": 30,
+        "brand": "FitLife",
+        "category": "Entrenamientos personalizados",
+        "thumbnail": "https://example.com/images/personal_training_3_months_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/personal_training_3_months_1.jpg",
+            "https://example.com/images/personal_training_3_months_2.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Entrenamiento Personalizado para Principiantes",
+        "description": "Plan de entrenamiento diseñado para principiantes que buscan iniciar su viaje fitness.",
+        "price": 69.99,
+        "discountPercentage": 5,
+        "rating": 4.6,
+        "stock": 40,
+        "brand": "FitLife",
+        "category": "Entrenamientos personalizados",
+        "thumbnail": "https://example.com/images/personal_training_beginners_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/personal_training_beginners_1.jpg",
+            "https://example.com/images/personal_training_beginners_2.jpg"
+        ]
+    },
+    {
+        "id": 4,
         "title": "Evaluación Física Inicial",
         "description": "Evaluación completa de la condición física para establecer un punto de partida.",
         "price": 49.99,
@@ -33,7 +65,39 @@
         ]
     },
     {
-        "id": 3,
+        "id": 5,
+        "title": "Evaluación Avanzada de Rendimiento",
+        "description": "Evaluación detallada de tu rendimiento físico para optimizar tu entrenamiento.",
+        "price": 79.99,
+        "discountPercentage": 10,
+        "rating": 4.8,
+        "stock": 50,
+        "brand": "FitLife",
+        "category": "Evaluación física inicial",
+        "thumbnail": "https://example.com/images/advanced_assessment_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/advanced_assessment_1.jpg",
+            "https://example.com/images/advanced_assessment_2.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Evaluación de Flexibilidad",
+        "description": "Prueba de flexibilidad para identificar áreas de mejora.",
+        "price": 39.99,
+        "discountPercentage": 0,
+        "rating": 4.6,
+        "stock": 60,
+        "brand": "FitLife",
+        "category": "Evaluación física inicial",
+        "thumbnail": "https://example.com/images/flexibility_assessment_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/flexibility_assessment_1.jpg",
+            "https://example.com/images/flexibility_assessment_2.jpg"
+        ]
+    },
+    {
+        "id": 7,
         "title": "Planificación de Rutinas de Ejercicio",
         "description": "Planificación de rutinas de ejercicio adaptadas a tus objetivos personales.",
         "price": 79.99,
@@ -49,7 +113,39 @@
         ]
     },
     {
-        "id": 4,
+        "id": 8,
+        "title": "Planificación de Rutinas para Pérdida de Peso",
+        "description": "Rutinas de ejercicio enfocadas en la pérdida de peso y quema de grasa.",
+        "price": 89.99,
+        "discountPercentage": 10,
+        "rating": 4.7,
+        "stock": 25,
+        "brand": "FitLife",
+        "category": "Planificación de rutinas de ejercicio",
+        "thumbnail": "https://example.com/images/weight_loss_routine_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/weight_loss_routine_1.jpg",
+            "https://example.com/images/weight_loss_routine_2.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Planificación de Rutinas para Aumento de Masa Muscular",
+        "description": "Rutinas diseñadas para aumentar la masa muscular y fuerza.",
+        "price": 89.99,
+        "discountPercentage": 10,
+        "rating": 4.8,
+        "stock": 20,
+        "brand": "FitLife",
+        "category": "Planificación de rutinas de ejercicio",
+        "thumbnail": "https://example.com/images/muscle_gain_routine_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/muscle_gain_routine_1.jpg",
+            "https://example.com/images/muscle_gain_routine_2.jpg"
+        ]
+    },
+    {
+        "id": 10,
         "title": "Asesoramiento Nutricional",
         "description": "Consulta con un nutricionista para crear un plan de alimentación saludable.",
         "price": 59.99,
@@ -65,7 +161,39 @@
         ]
     },
     {
-        "id": 5,
+        "id": 11,
+        "title": "Plan de Comidas Personalizado",
+        "description": "Plan de comidas adaptado a tus necesidades nutricionales y objetivos.",
+        "price": 69.99,
+        "discountPercentage": 10,
+        "rating": 4.8,
+        "stock": 35,
+        "brand": "FitLife",
+        "category": "Asesoramiento nutricional",
+        "thumbnail": "https://example.com/images/custom_meal_plan_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/custom_meal_plan_1.jpg",
+            "https://example.com/images/custom_meal_plan_2.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Taller de Nutrición",
+        "description": "Acceso a un taller sobre nutrición y alimentación saludable.",
+        "price": 39.99,
+        "discountPercentage": 0,
+        "rating": 4.5,
+        "stock": 60,
+        "brand": "FitLife",
+        "category": "Asesoramiento nutricional",
+        "thumbnail": "https://example.com/images/nutrition_workshop_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/nutrition_workshop_1.jpg",
+            "https://example.com/images/nutrition_workshop_2.jpg"
+        ]
+    },
+    {
+        "id": 13,
         "title": "Programa de Entrenamiento en Grupo",
         "description": "Acceso a un programa de entrenamiento en grupo durante 3 meses.",
         "price": 149.99,
@@ -81,7 +209,39 @@
         ]
     },
     {
-        "id": 6,
+        "id": 14,
+        "title": "Entrenamiento en Grupo Avanzado",
+        "description": "Programa de entrenamiento en grupo para personas con experiencia.",
+        "price": 179.99,
+        "discountPercentage": 15,
+        "rating": 4.9,
+        "stock": 25,
+        "brand": "FitLife",
+        "category": "Programas de entrenamiento en grupo",
+        "thumbnail": "https://example.com/images/advanced_group_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/advanced_group_training_1.jpg",
+            "https://example.com/images/advanced_group_training_2.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Entrenamiento en Grupo para Principiantes",
+        "description": "Entrenamiento grupal diseñado para principiantes.",
+        "price": 99.99,
+        "discountPercentage": 10,
+        "rating": 4.6,
+        "stock": 40,
+        "brand": "FitLife",
+        "category": "Programas de entrenamiento en grupo",
+        "thumbnail": "https://example.com/images/beginner_group_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/beginner_group_training_1.jpg",
+            "https://example.com/images/beginner_group_training_2.jpg"
+        ]
+    },
+    {
+        "id": 16,
         "title": "Clases de Entrenamiento en Casa",
         "description": "Acceso a clases virtuales de entrenamiento en casa durante un mes.",
         "price": 39.99,
@@ -97,7 +257,39 @@
         ]
     },
     {
-        "id": 7,
+        "id": 17,
+        "title": "Clases de Yoga en Casa",
+        "description": "Acceso a clases virtuales de yoga durante un mes.",
+        "price": 29.99,
+        "discountPercentage": 10,
+        "rating": 4.7,
+        "stock": 80,
+        "brand": "FitLife",
+        "category": "Clases de entrenamiento en casa",
+        "thumbnail": "https://example.com/images/yoga_classes_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/yoga_classes_1.jpg",
+            "https://example.com/images/yoga_classes_2.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Clases de Meditación Guiada",
+        "description": "Acceso a sesiones de meditación guiada en línea.",
+        "price": 19.99,
+        "discountPercentage": 0,
+        "rating": 4.5,
+        "stock": 100,
+        "brand": "FitLife",
+        "category": "Clases de entrenamiento en casa",
+        "thumbnail": "https://example.com/images/meditation_classes_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/meditation_classes_1.jpg",
+            "https://example.com/images/meditation_classes_2.jpg"
+        ]
+    },
+    {
+        "id": 19,
         "title": "Monitoreo y Seguimiento de Progreso",
         "description": "Servicio de seguimiento de tu progreso durante 3 meses.",
         "price": 89.99,
@@ -113,131 +305,501 @@
         ]
     },
     {
-        "id": 8,
-        "title": "Entrenamiento de Fuerza",
-        "description": "Programa de entrenamiento de fuerza personalizado durante 6 semanas.",
-        "price": 119.99,
-        "discountPercentage": 15,
-        "rating": 4.7,
-        "stock": 45,
-        "brand": "FitLife",
-        "category": "Entrenamiento de fuerza",
-        "thumbnail": "https://example.com/images/strength_training_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/strength_training_1.jpg",
-            "https://example.com/images/strength_training_2.jpg"
-        ]
-    },
-    {
-        "id": 9,
-        "title": "Entrenamiento Cardiovascular",
-        "description": "Plan de entrenamiento cardiovascular adaptado a tus necesidades.",
-        "price": 89.99,
-        "discountPercentage": 10,
-        "rating": 4.6,
-        "stock": 65,
-        "brand": "FitLife",
-        "category": "Entrenamiento cardiovascular",
-        "thumbnail": "https://example.com/images/cardio_training_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/cardio_training_1.jpg",
-            "https://example.com/images/cardio_training_2.jpg"
-        ]
-    },
-    {
-        "id": 10,
-        "title": "Asesoramiento sobre Suplementación",
-        "description": "Consulta con un experto en suplementación para optimizar tu rendimiento.",
-        "price": 49.99,
-        "discountPercentage": 5,
-        "rating": 4.8,
-        "stock": 50,
-        "brand": "FitLife",
-        "category": "Asesoramiento sobre suplementación",
-        "thumbnail": "https://example.com/images/supplement_advice_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/supplement_advice_1.jpg",
-            "https://example.com/images/supplement_advice_2.jpg"
-        ]
-    },
-    {
-        "id": 11,
-        "title": "Ejercicios de Rehabilitación",
-        "description": "Programa de ejercicios de rehabilitación personalizado para tu recuperación.",
-        "price": 99.99,
-        "discountPercentage": 20,
-        "rating": 4.7,
-        "stock": 30,
-        "brand": "FitLife",
-        "category": "Ejercicios de rehabilitación",
-        "thumbnail": "https://example.com/images/recovery_exercises_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/recovery_exercises_1.jpg",
-            "https://example.com/images/recovery_exercises_2.jpg"
-        ]
-    },
-    {
-        "id": 12,
-        "title": "Entrenamiento Funcional",
-        "description": "Programa de entrenamiento funcional adaptado a tus necesidades físicas.",
-        "price": 89.99,
-        "discountPercentage": 15,
-        "rating": 4.6,
-        "stock": 55,
-        "brand": "FitLife",
-        "category": "Entrenamiento funcional",
-        "thumbnail": "https://example.com/images/functional_training_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/functional_training_1.jpg",
-            "https://example.com/images/functional_training_2.jpg"
-        ]
-    },
-    {
-        "id": 13,
-        "title": "Planes de Acondicionamiento para Eventos Deportivos",
-        "description": "Plan de acondicionamiento personalizado para tu próximo evento deportivo.",
-        "price": 149.99,
-        "discountPercentage": 10,
-        "rating": 4.8,
-        "stock": 40,
-        "brand": "FitLife",
-        "category": "Planes de acondicionamiento para eventos deportivos",
-        "thumbnail": "https://example.com/images/sport_event_training_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/sport_event_training_1.jpg",
-            "https://example.com/images/sport_event_training_2.jpg"
-        ]
-    },
-    {
-        "id": 14,
-        "title": "Motivación y Coaching Personal",
-        "description": "Sesiones de coaching personal para mantenerte motivado en tu viaje fitness.",
-        "price": 79.99,
-        "discountPercentage": 10,
-        "rating": 4.5,
-        "stock": 50,
-        "brand": "FitLife",
-        "category": "Motivación y coaching personal",
-        "thumbnail": "https://example.com/images/coaching_thumbnail.jpg",
-        "images": [
-            "https://example.com/images/coaching_1.jpg",
-            "https://example.com/images/coaching_2.jpg"
-        ]
-    },
-    {
-        "id": 15,
-        "title": "Talleres sobre Salud y Bienestar",
-        "description": "Acceso a talleres mensuales sobre salud y bienestar.",
-        "price": 29.99,
+        "id": 20,
+        "title": "Análisis de Progreso Semanal",
+        "description": "Revisión semanal de tu progreso y ajustes necesarios.",
+        "price": 39.99,
         "discountPercentage": 0,
-        "rating": 4.4,
-        "stock": 100,
+        "rating": 4.5,
+        "stock": 70,
         "brand": "FitLife",
-        "category": "Talleres sobre salud y bienestar",
-        "thumbnail": "https://example.com/images/wellness_workshop_thumbnail.jpg",
+        "category": "Monitoreo y seguimiento de progreso",
+        "thumbnail": "https://example.com/images/weekly_progress_analysis_thumbnail.jpg",
         "images": [
-            "https://example.com/images/wellness_workshop_1.jpg",
-            "https://example.com/images/wellness_workshop_2.jpg"
+            "https://example.com/images/weekly_progress_analysis_1.jpg",
+            "https://example.com/images/weekly_progress_analysis_2.jpg"
         ]
-    }
-]
+    },
+      {
+            "id": 21,
+            "title": "Clases de Pilates en Casa",
+            "description": "Acceso a clases virtuales de pilates durante un mes.",
+            "price": 34.99,
+            "discountPercentage": 10,
+            "rating": 4.6,
+            "stock": 75,
+            "brand": "FitLife",
+            "category": "Clases de entrenamiento en casa",
+            "thumbnail": "https://example.com/images/pilates_classes_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/pilates_classes_1.jpg",
+                "https://example.com/images/pilates_classes_2.jpg"
+            ]
+        },
+        {
+            "id": 22,
+            "title": "Entrenamiento de Alta Intensidad (HIIT)",
+            "description": "Programa de entrenamiento HIIT para quemar grasa y tonificar.",
+            "price": 79.99,
+            "discountPercentage": 15,
+            "rating": 4.7,
+            "stock": 50,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/hiit_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/hiit_training_1.jpg",
+                "https://example.com/images/hiit_training_2.jpg"
+            ]
+        },
+        {
+            "id": 23,
+            "title": "Entrenamiento de Resistencia",
+            "description": "Programa diseñado para mejorar la resistencia física.",
+            "price": 89.99,
+            "discountPercentage": 0,
+            "rating": 4.8,
+            "stock": 40,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/endurance_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/endurance_training_1.jpg",
+                "https://example.com/images/endurance_training_2.jpg"
+            ]
+        },
+        {
+            "id": 24,
+            "title": "Entrenamiento de Fuerza",
+            "description": "Programa enfocado en el aumento de fuerza muscular.",
+            "price": 99.99,
+            "discountPercentage": 10,
+            "rating": 4.5,
+            "stock": 30,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/strength_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/strength_training_1.jpg",
+                "https://example.com/images/strength_training_2.jpg"
+            ]
+        },
+        {
+            "id": 25,
+            "title": "Taller de Cocina Saludable",
+            "description": "Aprende a preparar comidas saludables en este taller práctico.",
+            "price": 49.99,
+            "discountPercentage": 15,
+            "rating": 4.9,
+            "stock": 25,
+            "brand": "FitLife",
+            "category": "Asesoramiento nutricional",
+            "thumbnail": "https://example.com/images/healthy_cooking_workshop_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/healthy_cooking_workshop_1.jpg",
+                "https://example.com/images/healthy_cooking_workshop_2.jpg"
+            ]
+        },
+        {
+            "id": 26,
+            "title": "Plan de Suplementación Personalizado",
+            "description": "Asesoría para un plan de suplementación basado en tus objetivos.",
+            "price": 69.99,
+            "discountPercentage": 10,
+            "rating": 4.7,
+            "stock": 40,
+            "brand": "FitLife",
+            "category": "Asesoramiento nutricional",
+            "thumbnail": "https://example.com/images/supplement_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/supplement_plan_1.jpg",
+                "https://example.com/images/supplement_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 27,
+            "title": "Plan de Entrenamiento para Maratón",
+            "description": "Entrenamiento especializado para corredores de maratón.",
+            "price": 149.99,
+            "discountPercentage": 10,
+            "rating": 4.9,
+            "stock": 20,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/marathon_training_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/marathon_training_plan_1.jpg",
+                "https://example.com/images/marathon_training_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Programa de Fitness para Embarazadas",
+            "description": "Entrenamiento adaptado para mujeres embarazadas.",
+            "price": 79.99,
+            "discountPercentage": 15,
+            "rating": 4.6,
+            "stock": 30,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/pregnancy_fitness_program_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/pregnancy_fitness_program_1.jpg",
+                "https://example.com/images/pregnancy_fitness_program_2.jpg"
+            ]
+        },
+        {
+            "id": 29,
+            "title": "Clases de Zumba en Casa",
+            "description": "Acceso a clases virtuales de Zumba durante un mes.",
+            "price": 39.99,
+            "discountPercentage": 10,
+            "rating": 4.5,
+            "stock": 70,
+            "brand": "FitLife",
+            "category": "Clases de entrenamiento en casa",
+            "thumbnail": "https://example.com/images/zumba_classes_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/zumba_classes_1.jpg",
+                "https://example.com/images/zumba_classes_2.jpg"
+            ]
+        },
+        {
+            "id": 30,
+            "title": "Clases de Kickboxing en Casa",
+            "description": "Acceso a clases virtuales de kickboxing durante un mes.",
+            "price": 44.99,
+            "discountPercentage": 5,
+            "rating": 4.6,
+            "stock": 50,
+            "brand": "FitLife",
+            "category": "Clases de entrenamiento en casa",
+            "thumbnail": "https://example.com/images/kickboxing_classes_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/kickboxing_classes_1.jpg",
+                "https://example.com/images/kickboxing_classes_2.jpg"
+            ]
+        },
+        {
+            "id": 31,
+            "title": "Entrenamiento para Competencias de Fitness",
+            "description": "Entrenamiento especializado para competidores de fitness.",
+            "price": 199.99,
+            "discountPercentage": 10,
+            "rating": 4.9,
+            "stock": 15,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/competition_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/competition_training_1.jpg",
+                "https://example.com/images/competition_training_2.jpg"
+            ]
+        },
+        {
+            "id": 32,
+            "title": "Entrenamiento de Movilidad",
+            "description": "Programa para mejorar la movilidad y prevenir lesiones.",
+            "price": 59.99,
+            "discountPercentage": 10,
+            "rating": 4.6,
+            "stock": 55,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/mobility_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/mobility_training_1.jpg",
+                "https://example.com/images/mobility_training_2.jpg"
+            ]
+        },
+        {
+            "id": 33,
+            "title": "Asesoría en Salud Mental",
+            "description": "Sesiones de asesoría para mejorar tu bienestar mental.",
+            "price": 69.99,
+            "discountPercentage": 15,
+            "rating": 4.8,
+            "stock": 30,
+            "brand": "FitLife",
+            "category": "Bienestar mental",
+            "thumbnail": "https://example.com/images/mental_health_advice_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/mental_health_advice_1.jpg",
+                "https://example.com/images/mental_health_advice_2.jpg"
+            ]
+        },
+        {
+            "id": 34,
+            "title": "Programa de Desintoxicación",
+            "description": "Plan de desintoxicación para limpiar tu organismo.",
+            "price": 89.99,
+            "discountPercentage": 10,
+            "rating": 4.7,
+            "stock": 25,
+            "brand": "FitLife",
+            "category": "Nutrición",
+            "thumbnail": "https://example.com/images/detox_program_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/detox_program_1.jpg",
+                "https://example.com/images/detox_program_2.jpg"
+            ]
+        },
+        {
+            "id": 35,
+            "title": "Planificación de Ejercicios para Personas Mayores",
+            "description": "Entrenamiento adaptado para personas mayores.",
+            "price": 69.99,
+            "discountPercentage": 10,
+            "rating": 4.5,
+            "stock": 40,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/senior_fitness_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/senior_fitness_plan_1.jpg",
+                "https://example.com/images/senior_fitness_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 36,
+            "title": "Taller de Mindfulness",
+            "description": "Acceso a un taller sobre técnicas de mindfulness.",
+            "price": 39.99,
+            "discountPercentage": 0,
+            "rating": 4.5,
+            "stock": 60,
+            "brand": "FitLife",
+            "category": "Bienestar mental",
+            "thumbnail": "https://example.com/images/mindfulness_workshop_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/mindfulness_workshop_1.jpg",
+                "https://example.com/images/mindfulness_workshop_2.jpg"
+            ]
+        },
+        {
+            "id": 37,
+            "title": "Plan de Ejercicios para la Salud del Corazón",
+            "description": "Programa de ejercicios enfocado en la salud cardiovascular.",
+            "price": 79.99,
+            "discountPercentage": 10,
+            "rating": 4.8,
+            "stock": 35,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/heart_health_exercise_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/heart_health_exercise_plan_1.jpg",
+                "https://example.com/images/heart_health_exercise_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 38,
+            "title": "Clases de Entrenamiento Funcional",
+            "description": "Acceso a clases virtuales de entrenamiento funcional durante un mes.",
+            "price": 44.99,
+            "discountPercentage": 10,
+            "rating": 4.6,
+            "stock": 50,
+            "brand": "FitLife",
+            "category": "Clases de entrenamiento en casa",
+            "thumbnail": "https://example.com/images/functional_training_classes_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/functional_training_classes_1.jpg",
+                "https://example.com/images/functional_training_classes_2.jpg"
+            ]
+        },
+        {
+            "id": 39,
+            "title": "Entrenamiento de Boxeo",
+            "description": "Programa de entrenamiento de boxeo para todos los niveles.",
+            "price": 99.99,
+            "discountPercentage": 10,
+            "rating": 4.7,
+            "stock": 20,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/boxing_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/boxing_training_1.jpg",
+                "https://example.com/images/boxing_training_2.jpg"
+            ]
+        },
+        {
+            "id": 40,
+            "title": "Entrenamiento para la Mejora de la Postura",
+            "description": "Programa enfocado en corregir la postura corporal.",
+            "price": 59.99,
+            "discountPercentage": 10,
+            "rating": 4.5,
+            "stock": 50,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/posture_improvement_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/posture_improvement_1.jpg",
+                "https://example.com/images/posture_improvement_2.jpg"
+            ]
+        },
+        {
+            "id": 41,
+            "title": "Entrenamiento para la Flexibilidad",
+            "description": "Programa diseñado para mejorar la flexibilidad general.",
+            "price": 49.99,
+            "discountPercentage": 15,
+            "rating": 4.6,
+            "stock": 60,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/flexibility_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/flexibility_training_1.jpg",
+                "https://example.com/images/flexibility_training_2.jpg"
+            ]
+        },
+        {
+            "id": 42,
+            "title": "Plan de Ejercicios para Embarazadas",
+            "description": "Programa de ejercicios adaptado para mujeres embarazadas.",
+            "price": 69.99,
+            "discountPercentage": 10,
+            "rating": 4.7,
+            "stock": 30,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/pregnant_fitness_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/pregnant_fitness_plan_1.jpg",
+                "https://example.com/images/pregnant_fitness_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 43,
+            "title": "Clases de Tai Chi",
+            "description": "Acceso a clases virtuales de Tai Chi durante un mes.",
+            "price": 39.99,
+            "discountPercentage": 10,
+            "rating": 4.5,
+            "stock": 80,
+            "brand": "FitLife",
+            "category": "Clases de entrenamiento en casa",
+            "thumbnail": "https://example.com/images/tai_chi_classes_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/tai_chi_classes_1.jpg",
+                "https://example.com/images/tai_chi_classes_2.jpg"
+            ]
+        },
+        {
+            "id": 44,
+            "title": "Plan de Ejercicios para la Tercera Edad",
+            "description": "Programa de ejercicios adaptado para personas mayores.",
+            "price": 59.99,
+            "discountPercentage": 0,
+            "rating": 4.4,
+            "stock": 50,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/senior_exercise_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/senior_exercise_plan_1.jpg",
+                "https://example.com/images/senior_exercise_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 45,
+            "title": "Entrenamiento de Cuerpo Completo",
+            "description": "Programa de entrenamiento que trabaja todos los grupos musculares.",
+            "price": 89.99,
+            "discountPercentage": 10,
+            "rating": 4.5,
+            "stock": 35,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/full_body_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/full_body_training_1.jpg",
+                "https://example.com/images/full_body_training_2.jpg"
+            ]
+        },
+        {
+            "id": 46,
+            "title": "Entrenamiento de Core",
+            "description": "Programa enfocado en fortalecer la zona media del cuerpo.",
+            "price": 49.99,
+            "discountPercentage": 10,
+            "rating": 4.6,
+            "stock": 55,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/core_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/core_training_1.jpg",
+                "https://example.com/images/core_training_2.jpg"
+            ]
+        },
+        {
+            "id": 47,
+            "title": "Plan de Ejercicios para el Embarazo",
+            "description": "Entrenamiento adaptado para mujeres embarazadas.",
+            "price": 69.99,
+            "discountPercentage": 10,
+            "rating": 4.7,
+            "stock": 30,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/pregnancy_exercise_plan_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/pregnancy_exercise_plan_1.jpg",
+                "https://example.com/images/pregnancy_exercise_plan_2.jpg"
+            ]
+        },
+        {
+            "id": 48,
+            "title": "Entrenamiento de Resistencia para Principiantes",
+            "description": "Programa de resistencia diseñado para principiantes.",
+            "price": 59.99,
+            "discountPercentage": 0,
+            "rating": 4.4,
+            "stock": 50,
+            "brand": "FitLife",
+            "category": "Entrenamientos personalizados",
+            "thumbnail": "https://example.com/images/beginner_endurance_training_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/beginner_endurance_training_1.jpg",
+                "https://example.com/images/beginner_endurance_training_2.jpg"
+            ]
+        },
+        {
+            "id": 49,
+            "title": "Asesoría Nutricional para Deportistas",
+            "description": "Plan de nutrición adaptado a las necesidades de los deportistas.",
+            "price": 79.99,
+            "discountPercentage": 10,
+            "rating": 4.8,
+            "stock": 30,
+            "brand": "FitLife",
+            "category": "Asesoramiento nutricional",
+            "thumbnail": "https://example.com/images/sports_nutrition_advice_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/sports_nutrition_advice_1.jpg",
+                "https://example.com/images/sports_nutrition_advice_2.jpg"
+            ]
+        },
+        {
+            "id": 50,
+            "title": "Taller de Superalimentos",
+            "description": "Aprende sobre los beneficios de los superalimentos en este taller.",
+            "price": 49.99,
+            "discountPercentage": 15,
+            "rating": 4.7,
+            "stock": 25,
+            "brand": "FitLife",
+            "category": "Asesoramiento nutricional",
+            "thumbnail": "https://example.com/images/superfoods_workshop_thumbnail.jpg",
+            "images": [
+                "https://example.com/images/superfoods_workshop_1.jpg",
+                "https://example.com/images/superfoods_workshop_2.jpg"
+            ]
+        }
+    ]
+    
+

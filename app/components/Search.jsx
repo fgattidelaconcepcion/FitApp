@@ -1,9 +1,9 @@
-import { Button, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 import { colors } from "../global/colors";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from '@expo/vector-icons/Entypo';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const Search = ({onSearch = ()=>{}, error="", goBack=()=>{}}) => {
   const [keyword, setKeyword] = useState("");
@@ -17,13 +17,13 @@ const Search = ({onSearch = ()=>{}, error="", goBack=()=>{}}) => {
         onChangeText={setKeyword}
       />
       <Pressable onPress={() => onSearch(keyword)}>
-        <FontAwesome name="search" size={24} color="black" />
+      <Ionicons name="search-circle-sharp" size={24} color="blue" />
       </Pressable>
       <Pressable onPress={() => setKeyword("")}>
-        <FontAwesome5 name="eraser" size={24} color="black" />
+      <MaterialIcons name="clear" size={24} color="blue" />
       </Pressable>
       <Pressable onPress={goBack}>
-        <AntDesign name="back" size={24} color="black" />
+        <Entypo name="back" size={24} color="blue" />
       </Pressable>
       {error ? <Text style={{ color: "red" }}>{error}</Text> : null}
     </View>
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     width: 250,
     padding: 8,
     fontSize: 18,
-    backgroundColor: colors.teal400,
-    color: colors.platinum,
+    backgroundColor: colors.background,
+    color: colors.primary,
     borderRadius: 10,
   },
 });
