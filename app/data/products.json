@@ -1,0 +1,243 @@
+[
+    {
+        "id": 1,
+        "title": "Entrenamiento Personalizado 1 Mes",
+        "description": "Plan de entrenamiento personalizado por un mes con seguimiento semanal.",
+        "price": 99.99,
+        "discountPercentage": 10,
+        "rating": 4.8,
+        "stock": 50,
+        "brand": "FitLife",
+        "category": "Entrenamientos personalizados",
+        "thumbnail": "https://example.com/images/personal_training_1_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/personal_training_1_1.jpg",
+            "https://example.com/images/personal_training_1_2.jpg",
+            "https://example.com/images/personal_training_1_3.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Evaluación Física Inicial",
+        "description": "Evaluación completa de la condición física para establecer un punto de partida.",
+        "price": 49.99,
+        "discountPercentage": 5,
+        "rating": 4.7,
+        "stock": 75,
+        "brand": "FitLife",
+        "category": "Evaluación física inicial",
+        "thumbnail": "https://example.com/images/physical_assessment_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/physical_assessment_1.jpg",
+            "https://example.com/images/physical_assessment_2.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Planificación de Rutinas de Ejercicio",
+        "description": "Planificación de rutinas de ejercicio adaptadas a tus objetivos personales.",
+        "price": 79.99,
+        "discountPercentage": 15,
+        "rating": 4.6,
+        "stock": 30,
+        "brand": "FitLife",
+        "category": "Planificación de rutinas de ejercicio",
+        "thumbnail": "https://example.com/images/routine_planning_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/routine_planning_1.jpg",
+            "https://example.com/images/routine_planning_2.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Asesoramiento Nutricional",
+        "description": "Consulta con un nutricionista para crear un plan de alimentación saludable.",
+        "price": 59.99,
+        "discountPercentage": 20,
+        "rating": 4.9,
+        "stock": 40,
+        "brand": "FitLife",
+        "category": "Asesoramiento nutricional",
+        "thumbnail": "https://example.com/images/nutrition_advice_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/nutrition_advice_1.jpg",
+            "https://example.com/images/nutrition_advice_2.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Programa de Entrenamiento en Grupo",
+        "description": "Acceso a un programa de entrenamiento en grupo durante 3 meses.",
+        "price": 149.99,
+        "discountPercentage": 10,
+        "rating": 4.8,
+        "stock": 60,
+        "brand": "FitLife",
+        "category": "Programas de entrenamiento en grupo",
+        "thumbnail": "https://example.com/images/group_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/group_training_1.jpg",
+            "https://example.com/images/group_training_2.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Clases de Entrenamiento en Casa",
+        "description": "Acceso a clases virtuales de entrenamiento en casa durante un mes.",
+        "price": 39.99,
+        "discountPercentage": 15,
+        "rating": 4.5,
+        "stock": 100,
+        "brand": "FitLife",
+        "category": "Clases de entrenamiento en casa",
+        "thumbnail": "https://example.com/images/home_training_classes_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/home_training_classes_1.jpg",
+            "https://example.com/images/home_training_classes_2.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Monitoreo y Seguimiento de Progreso",
+        "description": "Servicio de seguimiento de tu progreso durante 3 meses.",
+        "price": 89.99,
+        "discountPercentage": 5,
+        "rating": 4.4,
+        "stock": 55,
+        "brand": "FitLife",
+        "category": "Monitoreo y seguimiento de progreso",
+        "thumbnail": "https://example.com/images/progress_monitoring_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/progress_monitoring_1.jpg",
+            "https://example.com/images/progress_monitoring_2.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Entrenamiento de Fuerza",
+        "description": "Programa de entrenamiento de fuerza personalizado durante 6 semanas.",
+        "price": 119.99,
+        "discountPercentage": 15,
+        "rating": 4.7,
+        "stock": 45,
+        "brand": "FitLife",
+        "category": "Entrenamiento de fuerza",
+        "thumbnail": "https://example.com/images/strength_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/strength_training_1.jpg",
+            "https://example.com/images/strength_training_2.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Entrenamiento Cardiovascular",
+        "description": "Plan de entrenamiento cardiovascular adaptado a tus necesidades.",
+        "price": 89.99,
+        "discountPercentage": 10,
+        "rating": 4.6,
+        "stock": 65,
+        "brand": "FitLife",
+        "category": "Entrenamiento cardiovascular",
+        "thumbnail": "https://example.com/images/cardio_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/cardio_training_1.jpg",
+            "https://example.com/images/cardio_training_2.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Asesoramiento sobre Suplementación",
+        "description": "Consulta con un experto en suplementación para optimizar tu rendimiento.",
+        "price": 49.99,
+        "discountPercentage": 5,
+        "rating": 4.8,
+        "stock": 50,
+        "brand": "FitLife",
+        "category": "Asesoramiento sobre suplementación",
+        "thumbnail": "https://example.com/images/supplement_advice_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/supplement_advice_1.jpg",
+            "https://example.com/images/supplement_advice_2.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Ejercicios de Rehabilitación",
+        "description": "Programa de ejercicios de rehabilitación personalizado para tu recuperación.",
+        "price": 99.99,
+        "discountPercentage": 20,
+        "rating": 4.7,
+        "stock": 30,
+        "brand": "FitLife",
+        "category": "Ejercicios de rehabilitación",
+        "thumbnail": "https://example.com/images/recovery_exercises_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/recovery_exercises_1.jpg",
+            "https://example.com/images/recovery_exercises_2.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Entrenamiento Funcional",
+        "description": "Programa de entrenamiento funcional adaptado a tus necesidades físicas.",
+        "price": 89.99,
+        "discountPercentage": 15,
+        "rating": 4.6,
+        "stock": 55,
+        "brand": "FitLife",
+        "category": "Entrenamiento funcional",
+        "thumbnail": "https://example.com/images/functional_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/functional_training_1.jpg",
+            "https://example.com/images/functional_training_2.jpg"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Planes de Acondicionamiento para Eventos Deportivos",
+        "description": "Plan de acondicionamiento personalizado para tu próximo evento deportivo.",
+        "price": 149.99,
+        "discountPercentage": 10,
+        "rating": 4.8,
+        "stock": 40,
+        "brand": "FitLife",
+        "category": "Planes de acondicionamiento para eventos deportivos",
+        "thumbnail": "https://example.com/images/sport_event_training_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/sport_event_training_1.jpg",
+            "https://example.com/images/sport_event_training_2.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Motivación y Coaching Personal",
+        "description": "Sesiones de coaching personal para mantenerte motivado en tu viaje fitness.",
+        "price": 79.99,
+        "discountPercentage": 10,
+        "rating": 4.5,
+        "stock": 50,
+        "brand": "FitLife",
+        "category": "Motivación y coaching personal",
+        "thumbnail": "https://example.com/images/coaching_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/coaching_1.jpg",
+            "https://example.com/images/coaching_2.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Talleres sobre Salud y Bienestar",
+        "description": "Acceso a talleres mensuales sobre salud y bienestar.",
+        "price": 29.99,
+        "discountPercentage": 0,
+        "rating": 4.4,
+        "stock": 100,
+        "brand": "FitLife",
+        "category": "Talleres sobre salud y bienestar",
+        "thumbnail": "https://example.com/images/wellness_workshop_thumbnail.jpg",
+        "images": [
+            "https://example.com/images/wellness_workshop_1.jpg",
+            "https://example.com/images/wellness_workshop_2.jpg"
+        ]
+    }
+]
