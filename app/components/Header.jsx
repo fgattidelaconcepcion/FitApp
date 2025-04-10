@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React from 'react'
 import { colors } from '../global/colors'
 
 const Header = ({title}) => {
+  const { height, width } = useWindowDimensions();
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={width > 360 ? styles.text : styles.textSm}>{title}</Text>
     </View>
   )
 }
+
 
 export default Header
 
@@ -21,6 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text: {
+    fontFamily :'Josefin',
     color: colors.text,
     fontSize: 25,
     

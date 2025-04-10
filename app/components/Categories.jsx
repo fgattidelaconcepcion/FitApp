@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image,Pressable } from "react-native";
+import { StyleSheet, Text, Image ,Pressable } from "react-native";
 import React from 'react'
 import Card from './Card'
 import { colors } from "../global/colors";
@@ -17,6 +17,7 @@ export default Categories
 
 const styles = StyleSheet.create({
   text: {
+    fontFamily: 'JosefinSans-Regular',
     fontSize: 20,
     textAlign: 'center',
     color: colors.text,
