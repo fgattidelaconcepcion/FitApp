@@ -17,13 +17,13 @@ const Search = ({onSearch = ()=>{}, error="", goBack=()=>{}}) => {
         onChangeText={setKeyword}
       />
       <Pressable onPress={() => onSearch(keyword)}>
-      <Ionicons name="search-circle-sharp" size={24} color="blue" />
+      <Ionicons name="search-circle-sharp" size={24} color="black" />
       </Pressable>
       <Pressable onPress={() => setKeyword("")}>
-      <MaterialIcons name="clear" size={24} color="blue" />
+      <MaterialIcons name="clear" size={24} color="black" />
       </Pressable>
       <Pressable onPress={goBack}>
-        <Entypo name="back" size={24} color="blue" />
+        <Entypo name="back" size={24} color="black" />
       </Pressable>
       {error ? <Text style={{ color: "red" }}>{error}</Text> : null}
     </View>
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     width: 250,
     padding: 8,
     fontSize: 18,
-    backgroundColor: colors.background,
-    color: colors.primary,
+    backgroundColor: colors.primary,
+    color: colors.background,
     borderRadius: 10,
   },
 });

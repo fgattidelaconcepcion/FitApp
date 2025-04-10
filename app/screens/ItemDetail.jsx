@@ -1,6 +1,7 @@
 import { Button, Image, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import allProducts from '../data/products.json';
+import { colors } from '../global/colors';
 
 const ItemDetail = ({idSelected='', setProductSelected = ()=>{}}) => {
   const [product, setProduct] = useState(null);
@@ -21,7 +22,7 @@ const ItemDetail = ({idSelected='', setProductSelected = ()=>{}}) => {
 
   return (
     <>
-      <Button title="Volver" onPress={() => setProductSelected("")} />
+      <Button title="Volver" color={colors.text.primary} onPress={() => setProductSelected("")} />
       {product ? (
         <View
           style={
@@ -45,7 +46,7 @@ const ItemDetail = ({idSelected='', setProductSelected = ()=>{}}) => {
             <Text>{product.title}</Text>
             <Text>{product.description}</Text>
             <Text style={styles.price}>{product.price}</Text>
-            <Button title="Add to cart" />
+            <Button title="Add to cart" color={colors.text.primary} />
           </View>
         </View>
       ) : null}

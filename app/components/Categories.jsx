@@ -20,6 +20,6 @@ const styles = StyleSheet.create({
     fontFamily: 'JosefinSans-Regular',
     fontSize: 20,
     textAlign: 'center',
-    color: colors.text,
+    color: colors.primary,
   }
 })
