@@ -9,11 +9,9 @@
         "stock": 50,
         "brand": "FitLife",
         "category": "Entrenamientos personalizados",
-        "thumbnail": "https://example.com/images/personal_training_1_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
         "images": [
-            "https://example.com/images/personal_training_1_1.jpg",
-            "https://example.com/images/personal_training_1_2.jpg",
-            "https://example.com/images/personal_training_1_3.jpg"
+            "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
         ]
     },
     {
@@ -26,10 +24,9 @@
         "stock": 30,
         "brand": "FitLife",
         "category": "Entrenamientos personalizados",
-        "thumbnail": "https://example.com/images/personal_training_3_months_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
         "images": [
-            "https://example.com/images/personal_training_3_months_1.jpg",
-            "https://example.com/images/personal_training_3_months_2.jpg"
+            "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
         ]
     },
     {
@@ -42,10 +39,9 @@
         "stock": 40,
         "brand": "FitLife",
         "category": "Entrenamientos personalizados",
-        "thumbnail": "https://example.com/images/personal_training_beginners_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
         "images": [
-            "https://example.com/images/personal_training_beginners_1.jpg",
-            "https://example.com/images/personal_training_beginners_2.jpg"
+           "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
         ]
     },
     {
@@ -58,10 +54,9 @@
         "stock": 75,
         "brand": "FitLife",
         "category": "Evaluación física inicial",
-        "thumbnail": "https://example.com/images/physical_assessment_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/1tc787Mn/Evaluacion-Inicial1-0.png",
         "images": [
-            "https://example.com/images/physical_assessment_1.jpg",
-            "https://example.com/images/physical_assessment_2.jpg"
+            "https://i.postimg.cc/1tc787Mn/Evaluacion-Inicial1-0.png"
         ]
     },
     {
@@ -74,10 +69,9 @@
         "stock": 50,
         "brand": "FitLife",
         "category": "Evaluación física inicial",
-        "thumbnail": "https://example.com/images/advanced_assessment_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/1tc787Mn/Evaluacion-Inicial1-0.png",
         "images": [
-            "https://example.com/images/advanced_assessment_1.jpg",
-            "https://example.com/images/advanced_assessment_2.jpg"
+            "https://i.postimg.cc/1tc787Mn/Evaluacion-Inicial1-0.png"
         ]
     },
     {
@@ -90,10 +84,9 @@
         "stock": 60,
         "brand": "FitLife",
         "category": "Evaluación física inicial",
-        "thumbnail": "https://example.com/images/flexibility_assessment_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/1tc787Mn/Evaluacion-Inicial1-0.png",
         "images": [
-            "https://example.com/images/flexibility_assessment_1.jpg",
-            "https://example.com/images/flexibility_assessment_2.jpg"
+           "https://i.postimg.cc/1tc787Mn/Evaluacion-Inicial1-0.png"
         ]
     },
     {
@@ -106,10 +99,9 @@
         "stock": 30,
         "brand": "FitLife",
         "category": "Planificación de rutinas de ejercicio",
-        "thumbnail": "https://example.com/images/routine_planning_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/bvzZX3dY/Planificacion-Rutinas1-0.jpg",
         "images": [
-            "https://example.com/images/routine_planning_1.jpg",
-            "https://example.com/images/routine_planning_2.jpg"
+            "https://i.postimg.cc/bvzZX3dY/Planificacion-Rutinas1-0.jpg"
         ]
     },
     {
@@ -122,10 +114,9 @@
         "stock": 25,
         "brand": "FitLife",
         "category": "Planificación de rutinas de ejercicio",
-        "thumbnail": "https://example.com/images/weight_loss_routine_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/bvzZX3dY/Planificacion-Rutinas1-0.jpg",
         "images": [
-            "https://example.com/images/weight_loss_routine_1.jpg",
-            "https://example.com/images/weight_loss_routine_2.jpg"
+            "https://i.postimg.cc/bvzZX3dY/Planificacion-Rutinas1-0.jpg"     
         ]
     },
     {
@@ -138,10 +129,10 @@
         "stock": 20,
         "brand": "FitLife",
         "category": "Planificación de rutinas de ejercicio",
-        "thumbnail": "https://example.com/images/muscle_gain_routine_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/bvzZX3dY/Planificacion-Rutinas1-0.jpg",
         "images": [
-            "https://example.com/images/muscle_gain_routine_1.jpg",
-            "https://example.com/images/muscle_gain_routine_2.jpg"
+            "https://i.postimg.cc/bvzZX3dY/Planificacion-Rutinas1-0.jpg"
+            
         ]
     },
     {
@@ -154,10 +145,9 @@
         "stock": 40,
         "brand": "FitLife",
         "category": "Asesoramiento nutricional",
-        "thumbnail": "https://example.com/images/nutrition_advice_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
         "images": [
-            "https://example.com/images/nutrition_advice_1.jpg",
-            "https://example.com/images/nutrition_advice_2.jpg"
+            "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
         ]
     },
     {
@@ -170,10 +160,10 @@
         "stock": 35,
         "brand": "FitLife",
         "category": "Asesoramiento nutricional",
-        "thumbnail": "https://example.com/images/custom_meal_plan_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
         "images": [
-            "https://example.com/images/custom_meal_plan_1.jpg",
-            "https://example.com/images/custom_meal_plan_2.jpg"
+            "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
+           
         ]
     },
     {
@@ -186,10 +176,10 @@
         "stock": 60,
         "brand": "FitLife",
         "category": "Asesoramiento nutricional",
-        "thumbnail": "https://example.com/images/nutrition_workshop_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
         "images": [
-            "https://example.com/images/nutrition_workshop_1.jpg",
-            "https://example.com/images/nutrition_workshop_2.jpg"
+            "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
+            
         ]
     },
     {
@@ -202,10 +192,10 @@
         "stock": 60,
         "brand": "FitLife",
         "category": "Programas de entrenamiento en grupo",
-        "thumbnail": "https://example.com/images/group_training_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/Xq5kp4Fk/Grupo-Entrenamiento1-0.webp",
         "images": [
-            "https://example.com/images/group_training_1.jpg",
-            "https://example.com/images/group_training_2.jpg"
+            "https://i.postimg.cc/Xq5kp4Fk/Grupo-Entrenamiento1-0.webp"
+            
         ]
     },
     {
@@ -218,10 +208,10 @@
         "stock": 25,
         "brand": "FitLife",
         "category": "Programas de entrenamiento en grupo",
-        "thumbnail": "https://example.com/images/advanced_group_training_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/Xq5kp4Fk/Grupo-Entrenamiento1-0.webp",
         "images": [
-            "https://example.com/images/advanced_group_training_1.jpg",
-            "https://example.com/images/advanced_group_training_2.jpg"
+            "https://i.postimg.cc/Xq5kp4Fk/Grupo-Entrenamiento1-0.webp"
+           
         ]
     },
     {
@@ -234,10 +224,9 @@
         "stock": 40,
         "brand": "FitLife",
         "category": "Programas de entrenamiento en grupo",
-        "thumbnail": "https://example.com/images/beginner_group_training_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/Xq5kp4Fk/Grupo-Entrenamiento1-0.webp",
         "images": [
-            "https://example.com/images/beginner_group_training_1.jpg",
-            "https://example.com/images/beginner_group_training_2.jpg"
+            "https://i.postimg.cc/Xq5kp4Fk/Grupo-Entrenamiento1-0.webp"
         ]
     },
     {
@@ -250,10 +239,9 @@
         "stock": 100,
         "brand": "FitLife",
         "category": "Clases de entrenamiento en casa",
-        "thumbnail": "https://example.com/images/home_training_classes_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
         "images": [
-            "https://example.com/images/home_training_classes_1.jpg",
-            "https://example.com/images/home_training_classes_2.jpg"
+           "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
         ]
     },
     {
@@ -266,10 +254,9 @@
         "stock": 80,
         "brand": "FitLife",
         "category": "Clases de entrenamiento en casa",
-        "thumbnail": "https://example.com/images/yoga_classes_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
         "images": [
-            "https://example.com/images/yoga_classes_1.jpg",
-            "https://example.com/images/yoga_classes_2.jpg"
+            "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
         ]
     },
     {
@@ -282,10 +269,9 @@
         "stock": 100,
         "brand": "FitLife",
         "category": "Clases de entrenamiento en casa",
-        "thumbnail": "https://example.com/images/meditation_classes_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
         "images": [
-            "https://example.com/images/meditation_classes_1.jpg",
-            "https://example.com/images/meditation_classes_2.jpg"
+            "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
         ]
     },
     {
@@ -298,10 +284,9 @@
         "stock": 55,
         "brand": "FitLife",
         "category": "Monitoreo y seguimiento de progreso",
-        "thumbnail": "https://example.com/images/progress_monitoring_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/FFJjNFhY/Monitoreo1-0.jpg",
         "images": [
-            "https://example.com/images/progress_monitoring_1.jpg",
-            "https://example.com/images/progress_monitoring_2.jpg"
+            "https://i.postimg.cc/FFJjNFhY/Monitoreo1-0.jpg"
         ]
     },
     {
@@ -314,10 +299,9 @@
         "stock": 70,
         "brand": "FitLife",
         "category": "Monitoreo y seguimiento de progreso",
-        "thumbnail": "https://example.com/images/weekly_progress_analysis_thumbnail.jpg",
+        "thumbnail": "https://i.postimg.cc/FFJjNFhY/Monitoreo1-0.jpg",
         "images": [
-            "https://example.com/images/weekly_progress_analysis_1.jpg",
-            "https://example.com/images/weekly_progress_analysis_2.jpg"
+           "https://i.postimg.cc/FFJjNFhY/Monitoreo1-0.jpg"
         ]
     },
       {
@@ -330,10 +314,9 @@
             "stock": 75,
             "brand": "FitLife",
             "category": "Clases de entrenamiento en casa",
-            "thumbnail": "https://example.com/images/pilates_classes_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
             "images": [
-                "https://example.com/images/pilates_classes_1.jpg",
-                "https://example.com/images/pilates_classes_2.jpg"
+                "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
             ]
         },
         {
@@ -346,10 +329,9 @@
             "stock": 50,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/hiit_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/hiit_training_1.jpg",
-                "https://example.com/images/hiit_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -362,10 +344,9 @@
             "stock": 40,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/endurance_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/endurance_training_1.jpg",
-                "https://example.com/images/endurance_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -378,10 +359,9 @@
             "stock": 30,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/strength_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/strength_training_1.jpg",
-                "https://example.com/images/strength_training_2.jpg"
+               "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -394,10 +374,9 @@
             "stock": 25,
             "brand": "FitLife",
             "category": "Asesoramiento nutricional",
-            "thumbnail": "https://example.com/images/healthy_cooking_workshop_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
             "images": [
-                "https://example.com/images/healthy_cooking_workshop_1.jpg",
-                "https://example.com/images/healthy_cooking_workshop_2.jpg"
+                "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
             ]
         },
         {
@@ -410,10 +389,9 @@
             "stock": 40,
             "brand": "FitLife",
             "category": "Asesoramiento nutricional",
-            "thumbnail": "https://example.com/images/supplement_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
             "images": [
-                "https://example.com/images/supplement_plan_1.jpg",
-                "https://example.com/images/supplement_plan_2.jpg"
+                "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
             ]
         },
         {
@@ -426,10 +404,9 @@
             "stock": 20,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/marathon_training_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/marathon_training_plan_1.jpg",
-                "https://example.com/images/marathon_training_plan_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -442,10 +419,9 @@
             "stock": 30,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/pregnancy_fitness_program_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/pregnancy_fitness_program_1.jpg",
-                "https://example.com/images/pregnancy_fitness_program_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -458,10 +434,9 @@
             "stock": 70,
             "brand": "FitLife",
             "category": "Clases de entrenamiento en casa",
-            "thumbnail": "https://example.com/images/zumba_classes_thumbnail.jpg",
+            "thumbnail":  "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
             "images": [
-                "https://example.com/images/zumba_classes_1.jpg",
-                "https://example.com/images/zumba_classes_2.jpg"
+                 "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
             ]
         },
         {
@@ -474,10 +449,9 @@
             "stock": 50,
             "brand": "FitLife",
             "category": "Clases de entrenamiento en casa",
-            "thumbnail": "https://example.com/images/kickboxing_classes_thumbnail.jpg",
+            "thumbnail":  "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
             "images": [
-                "https://example.com/images/kickboxing_classes_1.jpg",
-                "https://example.com/images/kickboxing_classes_2.jpg"
+               "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
             ]
         },
         {
@@ -490,10 +464,9 @@
             "stock": 15,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/competition_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/competition_training_1.jpg",
-                "https://example.com/images/competition_training_2.jpg"
+               "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -506,10 +479,9 @@
             "stock": 55,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/mobility_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/mobility_training_1.jpg",
-                "https://example.com/images/mobility_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -522,10 +494,9 @@
             "stock": 30,
             "brand": "FitLife",
             "category": "Bienestar mental",
-            "thumbnail": "https://example.com/images/mental_health_advice_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/9FnW85nC/Bien-Estar-Mental1-0.png",
             "images": [
-                "https://example.com/images/mental_health_advice_1.jpg",
-                "https://example.com/images/mental_health_advice_2.jpg"
+                "https://i.postimg.cc/9FnW85nC/Bien-Estar-Mental1-0.png"
             ]
         },
         {
@@ -538,10 +509,9 @@
             "stock": 25,
             "brand": "FitLife",
             "category": "Nutrición",
-            "thumbnail": "https://example.com/images/detox_program_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/9FKBW0nS/nutricion1-0.jpg",
             "images": [
-                "https://example.com/images/detox_program_1.jpg",
-                "https://example.com/images/detox_program_2.jpg"
+                "https://i.postimg.cc/9FKBW0nS/nutricion1-0.jpg"
             ]
         },
         {
@@ -554,10 +524,9 @@
             "stock": 40,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/senior_fitness_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/senior_fitness_plan_1.jpg",
-                "https://example.com/images/senior_fitness_plan_2.jpg"
+               "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -570,10 +539,9 @@
             "stock": 60,
             "brand": "FitLife",
             "category": "Bienestar mental",
-            "thumbnail": "https://example.com/images/mindfulness_workshop_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/9FnW85nC/Bien-Estar-Mental1-0.png",
             "images": [
-                "https://example.com/images/mindfulness_workshop_1.jpg",
-                "https://example.com/images/mindfulness_workshop_2.jpg"
+                "https://i.postimg.cc/9FnW85nC/Bien-Estar-Mental1-0.png"
             ]
         },
         {
@@ -586,10 +554,9 @@
             "stock": 35,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/heart_health_exercise_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/heart_health_exercise_plan_1.jpg",
-                "https://example.com/images/heart_health_exercise_plan_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -602,10 +569,9 @@
             "stock": 50,
             "brand": "FitLife",
             "category": "Clases de entrenamiento en casa",
-            "thumbnail": "https://example.com/images/functional_training_classes_thumbnail.jpg",
+            "thumbnail":  "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
             "images": [
-                "https://example.com/images/functional_training_classes_1.jpg",
-                "https://example.com/images/functional_training_classes_2.jpg"
+                "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
             ]
         },
         {
@@ -618,10 +584,9 @@
             "stock": 20,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/boxing_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/boxing_training_1.jpg",
-                "https://example.com/images/boxing_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -634,10 +599,9 @@
             "stock": 50,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/posture_improvement_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/posture_improvement_1.jpg",
-                "https://example.com/images/posture_improvement_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -650,10 +614,9 @@
             "stock": 60,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/flexibility_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/flexibility_training_1.jpg",
-                "https://example.com/images/flexibility_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -666,10 +629,9 @@
             "stock": 30,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/pregnant_fitness_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/pregnant_fitness_plan_1.jpg",
-                "https://example.com/images/pregnant_fitness_plan_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -682,10 +644,9 @@
             "stock": 80,
             "brand": "FitLife",
             "category": "Clases de entrenamiento en casa",
-            "thumbnail": "https://example.com/images/tai_chi_classes_thumbnail.jpg",
+            "thumbnail":  "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg",
             "images": [
-                "https://example.com/images/tai_chi_classes_1.jpg",
-                "https://example.com/images/tai_chi_classes_2.jpg"
+                "https://i.postimg.cc/gJWZN868/Clases-Casa1-0.jpg"
             ]
         },
         {
@@ -698,10 +659,9 @@
             "stock": 50,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/senior_exercise_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/senior_exercise_plan_1.jpg",
-                "https://example.com/images/senior_exercise_plan_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -714,10 +674,9 @@
             "stock": 35,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/full_body_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/full_body_training_1.jpg",
-                "https://example.com/images/full_body_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -730,10 +689,9 @@
             "stock": 55,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/core_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/core_training_1.jpg",
-                "https://example.com/images/core_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -746,10 +704,9 @@
             "stock": 30,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/pregnancy_exercise_plan_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/pregnancy_exercise_plan_1.jpg",
-                "https://example.com/images/pregnancy_exercise_plan_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -762,10 +719,9 @@
             "stock": 50,
             "brand": "FitLife",
             "category": "Entrenamientos personalizados",
-            "thumbnail": "https://example.com/images/beginner_endurance_training_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png",
             "images": [
-                "https://example.com/images/beginner_endurance_training_1.jpg",
-                "https://example.com/images/beginner_endurance_training_2.jpg"
+                "https://i.postimg.cc/vHtD2YKp/Entrenamiento1-0.png"
             ]
         },
         {
@@ -778,10 +734,9 @@
             "stock": 30,
             "brand": "FitLife",
             "category": "Asesoramiento nutricional",
-            "thumbnail": "https://example.com/images/sports_nutrition_advice_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
             "images": [
-                "https://example.com/images/sports_nutrition_advice_1.jpg",
-                "https://example.com/images/sports_nutrition_advice_2.jpg"
+                "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
             ]
         },
         {
@@ -794,10 +749,9 @@
             "stock": 25,
             "brand": "FitLife",
             "category": "Asesoramiento nutricional",
-            "thumbnail": "https://example.com/images/superfoods_workshop_thumbnail.jpg",
+            "thumbnail": "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif",
             "images": [
-                "https://example.com/images/superfoods_workshop_1.jpg",
-                "https://example.com/images/superfoods_workshop_2.jpg"
+               "https://i.postimg.cc/52nDSSYQ/Asesoramiento-Nutricional1-0.avif"
             ]
         }
     ]
