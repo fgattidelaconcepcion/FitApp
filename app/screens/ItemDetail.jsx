@@ -3,56 +3,42 @@ import React, { useEffect, useState } from 'react'
 import allProducts from '../data/products.json';
 import { colors } from '../global/colors';
 
-const ItemDetail = ({idSelected='', setProductSelected = ()=>{}}) => {
+const ItemDetail = ({ route, navigation }) => {
+  const { id } = route.params;
   const [product, setProduct] = useState(null);
   const [orientation, setOrientation] = useState("portrait");
-  const {width, height} = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
 
   useEffect(() => {
-    if (width > height) setOrientation("landscape");
-    else setOrientation("portrait");
+    setOrientation(width > height ? "landscape" : "portrait");
   }, [width, height]);
 
   useEffect(() => {
-    const productSelected = allProducts.find( (product) => product.id === idSelected);
-    setProduct(productSelected)
-
-  }, [idSelected]);
-  console.log(product?.images[0])
+    const productSelected = allProducts.find((product) => product.id === id);
+    setProduct(productSelected);
+  }, [id]);
 
   return (
     <>
-      <Button title="Volver" color={colors.text.primary} onPress={() => setProductSelected("")} />
-      {product ? (
-        <View
-          style={
-            orientation === "portrait"
-              ? styles.mainContainer
-              : styles.mainContainerLandscape
-          }
-        >
+      <Button title="Volver" color={colors.text.primary} onPress={() => navigation.goBack()} />
+      {product && (
+        <View style={orientation === "portrait" ? styles.mainContainer : styles.mainContainerLandscape}>
           <Image
-            source={{uri: product.images[0]}}
+            source={{ uri: product.images[0] }}
             resizeMode="contain"
-            style={
-              orientation === "portrait" ? styles.image : styles.imageLandscape
-            }
+            style={orientation === "portrait" ? styles.image : styles.imageLandscape}
           />
-          <View
-            style={
-              orientation === "portrait" ? styles.textContainer : styles.textContainerLandscape
-            }
-          >
+          <View style={orientation === "portrait" ? styles.textContainer : styles.textContainerLandscape}>
             <Text>{product.title}</Text>
             <Text>{product.description}</Text>
             <Text style={styles.price}>{product.price}</Text>
-            <Button title="Add to cart" color={colors.text.primary} />
+            <Button title="Agregar al carrito" color={colors.text.primary} />
           </View>
         </View>
-      ) : null}
+      )}
     </>
   );
-}
+};
 
 export default ItemDetail
 

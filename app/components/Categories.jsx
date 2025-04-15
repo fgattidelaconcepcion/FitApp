@@ -17,7 +17,7 @@ export default Categories
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: 'JosefinSans-Regular',
+    fontFamily: 'JosefinSans',
     fontSize: 20,
     textAlign: 'center',
     color: colors.primary,

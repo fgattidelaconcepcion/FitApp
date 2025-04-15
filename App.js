@@ -1,51 +1,35 @@
-import { StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
-import { colors } from './app/global/colors';
-import Header from './app/components/Header';
-import Home from './app/screens/Home';
-import ItemListCategory from './app/screens/ItemListCategory';
-import ItemDetail from './app/screens/ItemDetail.jsx';
+// App.js
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaView, StyleSheet, Platform, StatusBar } from 'react-native';
+import StackNavigator from './app/navigation/StackNavigator';
 import { useFonts } from 'expo-font';
-import { useState } from 'react';
-
+import { colors } from './app/global/colors';
 
 export default function App() {
- 
-  const [categorySelected, setCategorySelected] = useState("");
-  const [itemIdSelected, setItemIdSelected] = useState("");
   const [fontsLoaded, fontError] = useFonts({
     Josefin: require('./assets/JosefinSlab-BoldItalic.ttf'),
-  })
+    JosefinSans: require('./assets/JosefinSans-Regular.ttf'),
+  });
+  
 
-  if(!fontsLoaded || fontError) return null;
-
-  if (fontsLoaded && !fontError) {
+  if (fontError) return <Text>Error cargando fuente</Text>;
+  if (!fontsLoaded) return null;
+  
   return (
-    <SafeAreaView style={styles.container}>
-      <Header title={"FitApp"} />
-      {!categorySelected ? (
-        <Home setCategorySelected={setCategorySelected} />
-      ) : !itemIdSelected ? (
-        <ItemListCategory
-          categorySelected={categorySelected}
-          setCategorySelected={setCategorySelected}
-          setItemIdSelected={setItemIdSelected}
-        />
-      ) : (
-        <ItemDetail 
-          idSelected={itemIdSelected}
-          setProductSelected={setItemIdSelected}
-        />
-      )}
-    </SafeAreaView>
+    <NavigationContainer>
+  <SafeAreaView style={styles.container}>
+    <StackNavigator />
+  </SafeAreaView>
+</NavigationContainer>
+
   );
-}
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
      marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0, 
-    alignItems: 'center',
+    // alignItems: 'center', //  comentar esta línea
     backgroundColor: colors.background
   },
 });

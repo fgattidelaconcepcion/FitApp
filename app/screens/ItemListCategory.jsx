@@ -4,47 +4,46 @@ import products from "../data/products.json"
 import Search from '../components/Search'
 import ProductItem from '../components/ProductItem'
 
-const ItemListCategory = ({
-  categorySelected = "",
-  setCategorySelected = () => {},
-  setItemIdSelected = () => {},
-}) => {
+const ItemListCategory = ({ navigation, route }) => {
+  const { category } = route.params;
   const [keyWord, setKeyword] = useState("");
   const [productsFiltered, setProductsFiltered] = useState([]);
   const [error, setError] = useState("");
- 
 
-  useEffect(()=>{
+  useEffect(() => {
     const regex = /\d/;
-    const hasDigits = (regex.test(keyWord))
-    
-    if(hasDigits) {
-      setError("No se permiten numeros")
-      return
+    if (regex.test(keyWord)) {
+      setError("No se permiten números");
+      return;
     }
-    const productsPrefiltered = products.filter(product => product.category === categorySelected)
-    
-    const productsFilter = productsPrefiltered.filter(product => product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
-    
-    setProductsFiltered(productsFilter);
-    setError("")
 
-  }, [keyWord, categorySelected])
+    const productsPrefiltered = products.filter(p => p.category === category);
+    const productsFilter = productsPrefiltered.filter(p =>
+      p.title.toLowerCase().includes(keyWord.toLowerCase())
+    );
+
+    setProductsFiltered(productsFilter);
+    setError("");
+  }, [keyWord, category]);
+
   return (
     <View>
       <Search
         error={error}
         onSearch={setKeyword}
-        goBack={() => setCategorySelected("")}
+        goBack={() => navigation.goBack()}
       />
       <FlatList
         data={productsFiltered}
-        renderItem={({ item }) => <ProductItem product={item} setItemIdSelected={setItemIdSelected} />}
+        renderItem={({ item }) => (
+          <ProductItem product={item} setItemIdSelected={(id) => navigation.navigate('ItemDetail', { id })} />
+        )}
         keyExtractor={(producto) => producto.id}
       />
     </View>
   );
-}
+};
+
 
 export default ItemListCategory
 

@@ -7,7 +7,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const Search = ({onSearch = ()=>{}, error="", goBack=()=>{}}) => {
   const [keyword, setKeyword] = useState("");
-  //console.log(error)
+  
   return (
     <View style={styles.container}>
       <TextInput
