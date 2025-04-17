@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
     width: '90%',
-    minHeight: 100,
-    shadowColor: "#000",
+    minHeight: 70,
+    shadowColor: colors.secondary,
     shadowOffset: {
       width: 0,
       height: 3,
