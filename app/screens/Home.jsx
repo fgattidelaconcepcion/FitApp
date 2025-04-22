@@ -1,17 +1,24 @@
-import React from 'react'
-import { FlatList, StyleSheet, View} from 'react-native'
-import categories from '../data/categories.json'
-import Categories from '../components/Categories'
-import { colors } from '../global/colors'
+import React from 'react';
+import { FlatList, StyleSheet, View } from 'react-native';
+import categories from '../data/categories.json';
+import Categories from '../components/Categories';
+import { colors } from '../global/colors';
+import Counter from "../components/Counter";
 
-const Home = ({ navigation }) => {
+const Home = ({ route, navigation }) => {
   return (
     <View style={styles.flatListContainer}>
+      <Counter />
       <FlatList
         showsVerticalScrollIndicator={false}
         data={categories.sort()}
         renderItem={({ item }) => (
-          <Categories category={item} selectCategory={() => navigation.navigate('ItemListCategory', { category: item })} />
+          <Categories 
+            category={item} 
+            selectCategory={(cat) =>
+              navigation.navigate("CategoryDetail", { category: cat })
+            }
+          />
         )}
         keyExtractor={(itemElement) => itemElement}
       />
@@ -19,8 +26,7 @@ const Home = ({ navigation }) => {
   );
 };
 
-
-export default Home
+export default Home;
 
 const styles = StyleSheet.create({
   flatListContainer: {
@@ -30,6 +36,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 10
-  }
-})
+    gap: 10,
+  },
+});

@@ -3,10 +3,22 @@ import React from "react";
 import Card from "./Card";
 import { colors } from "../global/colors";
 
-const ProductItem = ({ product, setItemIdSelected = () => {} }) => {
+import { useDispatch } from "react-redux";
+import { setIdSelected } from "../features/shop/shopSlice";
+import { useNavigation } from "@react-navigation/native";
+
+const ProductItem = ({ product }) => {
+  const dispatch = useDispatch();
+  const navigation = useNavigation();
+
+  const handleNavigate = () => {
+    dispatch(setIdSelected(product.id)); // Guarda el ID en Redux
+    navigation.navigate("ItemDetail", { id: product.id }); // Navega pasando el id
+  };
+
   return (
     <Card style={styles.card}>
-      <Pressable style={styles.pressable} onPress={() => setItemIdSelected(product.id)}>
+      <Pressable style={styles.pressable} onPress={handleNavigate}>
         <View style={styles.textContainer}>
           <Text style={styles.textCategory}>{product.title}</Text>
         </View>
@@ -23,7 +35,6 @@ const ProductItem = ({ product, setItemIdSelected = () => {} }) => {
 };
 
 export default ProductItem;
-
 
 const styles = StyleSheet.create({
   card: {
@@ -53,7 +64,7 @@ const styles = StyleSheet.create({
     height: 100,
     justifyContent: "center",
     alignItems: "center",
-    overflow: "hidden", 
+    overflow: "hidden",
   },
   image: {
     width: "100%",

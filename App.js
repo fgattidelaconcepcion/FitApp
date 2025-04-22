@@ -4,6 +4,8 @@ import { SafeAreaView, StyleSheet, Platform, StatusBar } from 'react-native';
 import StackNavigator from './app/navigation/StackNavigator';
 import { useFonts } from 'expo-font';
 import { colors } from './app/global/colors';
+import store from './app/store';
+import { Provider } from "react-redux";
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -18,7 +20,9 @@ export default function App() {
   return (
     <NavigationContainer>
   <SafeAreaView style={styles.container}>
+    <Provider store={store}>
     <StackNavigator />
+    </Provider>
   </SafeAreaView>
 </NavigationContainer>
 
