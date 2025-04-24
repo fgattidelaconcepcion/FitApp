@@ -1,0 +1,1 @@
+export const baseURL = "https://fitapp-e60f8-default-rtdb.firebaseio.com/";
