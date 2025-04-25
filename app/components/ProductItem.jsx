@@ -13,7 +13,7 @@ const ProductItem = ({ product }) => {
 
   const handleNavigate = () => {
     dispatch(setIdSelected(product.id)); // Guarda el ID en Redux
-    navigation.navigate("ItemDetail", { id: product.id }); // Navega pasando el id
+    navigation.navigate("ItemDetail", { productId: product.id }); // Navega pasando productId
   };
 
   return (
@@ -38,42 +38,28 @@ export default ProductItem;
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection: "row",
-    height: 120,
-    width: 300,
     margin: 10,
-    paddingHorizontal: 10,
-    backgroundColor: colors.background,
-    borderRadius: 10,
-    overflow: "hidden",
-    alignItems: "center",
-    justifyContent: "space-between",
   },
   pressable: {
     flexDirection: "row",
-    flex: 1,
     alignItems: "center",
-    justifyContent: "space-between",
   },
   textContainer: {
     flex: 1,
-    paddingRight: 10,
+    padding: 10,
+  },
+  textCategory: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: colors.primary,
   },
   imageContainer: {
     width: 100,
     height: 100,
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
+    marginLeft: 10,
   },
   image: {
     width: "100%",
     height: "100%",
-    borderRadius: 8,
-  },
-  textCategory: {
-    color: colors.primary,
-    fontSize: 16,
-    fontWeight: "500",
   },
 });
