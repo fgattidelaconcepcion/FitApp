@@ -1,33 +1,47 @@
 import React, { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
-import products from "../data/products.json"
+//import products from "../data/products.json"
 import Search from '../components/Search'
 import ProductItem from '../components/ProductItem'
+import { useGetProductsByCategoryQuery } from '../services/shopServices';
 
-const ItemListCategory = ({ navigation, route }) => {
-  const { category } = route.params;
+const ItemListCategory = ({
+  navigation,
+  route
+}) => {
   const [keyWord, setKeyword] = useState("");
   const [productsFiltered, setProductsFiltered] = useState([]);
   const [error, setError] = useState("");
 
+  const {category: categorySelected} = route.params
+  const {
+    data: productFetched, 
+    error: errorFromFetch, 
+    isLoading 
+  } = useGetProductsByCategoryQuery(categorySelected)
+
+  
+  
   useEffect(() => {
     const regex = /\d/;
-    if (regex.test(keyWord)) {
-      setError("No se permiten números");
+    const hasDigits = regex.test(keyWord);
+    if (hasDigits) {
+      setError("No se permiten numeros");
       return;
     }
 
-    const productsPrefiltered = products.filter(p => p.category === category);
-    const productsFilter = productsPrefiltered.filter(p =>
-      p.title.toLowerCase().includes(keyWord.toLowerCase())
-    );
+    if(!isLoading) {
+      
+      const productsFilter = productFetched.filter((product) =>
+        product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase())
+      );
+      setProductsFiltered(productsFilter);
+      setError("");
+    }
 
-    setProductsFiltered(productsFilter);
-    setError("");
-  }, [keyWord, category]);
-
+  }, [keyWord, categorySelected, productFetched, isLoading]);
   return (
-    <View>
+    <View style={styles.flatListContainer}>
       <Search
         error={error}
         onSearch={setKeyword}
@@ -36,7 +50,9 @@ const ItemListCategory = ({ navigation, route }) => {
       <FlatList
         data={productsFiltered}
         renderItem={({ item }) => (
-          <ProductItem product={item} setItemIdSelected={(id) => navigation.navigate('ItemDetail', { id })} />
+            <ProductItem 
+              product={item} 
+              navigation={navigation} />
         )}
         keyExtractor={(producto) => producto.id}
       />
@@ -44,7 +60,7 @@ const ItemListCategory = ({ navigation, route }) => {
   );
 };
 
-
 export default ItemListCategory
+
 
 const styles = StyleSheet.create({})
