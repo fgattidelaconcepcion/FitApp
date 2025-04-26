@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const CartTemp = () => {
+const Cart = () => {
   return (
     <View>
       <Text>CartTemp</Text>
@@ -9,6 +9,6 @@ const CartTemp = () => {
   )
 }
 
-export default CartTemp
+export default Cart
 
 const styles = StyleSheet.create({})

@@ -1,7 +1,7 @@
 import { Button, Image, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { useGetProductByIdQuery } from '../services/shopServices';
-
+import {addCartItem} from '../features/cart/cartSlice';
 const ItemDetail = ({
   route,
   navigation
@@ -16,6 +16,10 @@ const ItemDetail = ({
     if (width > height) setOrientation("landscape");
     else setOrientation("portrait");
   }, [width, height]);
+
+  const handleAddcart = () => {
+    addCartItem ({...product, quantity:1})
+  }
 
   if (isLoading) {
     return (
@@ -62,7 +66,7 @@ const ItemDetail = ({
             <Text>{product.title}</Text>
             <Text>{product.description}</Text>
             <Text style={styles.price}>{product.price}</Text>
-            <Button title="Add to cart" />
+            <Button title="Add to cart" onPress={handleAddcart} />
           </View>
         </View>
       ) : (
