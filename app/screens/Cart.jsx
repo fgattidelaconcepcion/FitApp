@@ -1,10 +1,22 @@
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import CartItem from '../components/CartItem'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import {removeCartItem, clearCart} from  '../features/cart/cartSlice';
+import { colors } from '../global/colors'
 
 const CartScreen = () => {
+  const dispatch = useDispatch();
   const {items : CartData , total} = useSelector((state)=>state.cart.value)
+
+  const handleRemoveItem = (id) => {
+    dispatch(removeCartItem(id));
+  };
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
+
   return (
     <View style={styles.contaier}>
       <FlatList 
@@ -13,14 +25,14 @@ const CartScreen = () => {
         renderItem={({item})=>{
           return (
             <CartItem 
-              cartItem={item}
+              cartItem={item} onRemove={handleRemoveItem}
             />
           )
         }}
       />
       <View style={styles.totalContainer}>
-        <Pressable>
-        <Text>Total a pagar: ${total}</Text>
+        <Pressable onPress={handleClearCart}>
+        <Text style={styles.totalText}>Vaciar carrtio - Total a pagar: ${total}</Text>
         </Pressable>
       </View>
     </View>
@@ -41,4 +53,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-})
+  clearButton: {
+    backgroundColor: colors.primary,
+    padding : 12,
+    borderRadius:8,
+  },
+  totalText:{
+    color:colors.primary,
+    fontWeight: 'bold',
+    fontSize: 16,
+  }
+});

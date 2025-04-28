@@ -20,7 +20,7 @@ export const cartSlice = createSlice({
                         item.total = item.price * item.quantity;
                         return item;
                     }
-                    return item; // Asegúrate de devolver el item original si no coincide
+                    return item;
                 });
                 const total = itemsUpdated.reduce((acc, currentItem) =>
                     (acc += currentItem.price * currentItem.quantity), 0);
@@ -43,12 +43,12 @@ export const cartSlice = createSlice({
         },
         removeCartItem: (state, { payload }) => {
             // Filtrar los artículos para eliminar el que coincide con el id
-            const itemsUpdated = state.value.items.filter(item => item.id !== payload.id);
-            
+            const itemsUpdated = state.value.items.filter(item => item.id !== payload);
+
             // Calcular el nuevo total
             const total = itemsUpdated.reduce((acc, currentItem) =>
                 acc + (currentItem.price * currentItem.quantity), 0);
-            
+
             // Actualizar el estado
             state.value = {
                 ...state.value,
@@ -60,7 +60,7 @@ export const cartSlice = createSlice({
         clearCart: (state) => {
             state.value.items = [];
             state.value.total = 0;
-            state.value.updateAt = new Date().toLocaleString(); // Actualizar la fecha de la última modificación
+            state.value.updateAt = new Date().toLocaleString();
         },
     }
 });

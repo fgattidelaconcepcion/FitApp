@@ -1,17 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../global/colors';
 import Entypo from "@expo/vector-icons/Entypo";
 
-const CartItem = ({cartItem}) => {
+const CartItem = ({cartItem , onRemove}) => {
   return (
     <View style={styles.card}>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{cartItem.title}</Text>
         <Text style={styles.text2}>{cartItem.brand}</Text>
         <Text style={styles.text2}>{cartItem.price}</Text>
-      </View>
-      <Entypo name="trash" size={30} color="black" />
+      </View> 
+      <Pressable onPress={() => onRemove(cartItem.id)}>
+        <Entypo name="trash" size={30} color="black" />
+      </Pressable>
     </View>
   );
 }
