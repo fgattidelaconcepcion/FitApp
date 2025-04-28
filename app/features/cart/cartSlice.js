@@ -41,10 +41,26 @@ export const cartSlice = createSlice({
                 };
             }
         },
-        removeCartItem: () => { },
+        removeCartItem: (state, { payload }) => {
+            // Filtrar los artículos para eliminar el que coincide con el id
+            const itemsUpdated = state.value.items.filter(item => item.id !== payload.id);
+            
+            // Calcular el nuevo total
+            const total = itemsUpdated.reduce((acc, currentItem) =>
+                acc + (currentItem.price * currentItem.quantity), 0);
+            
+            // Actualizar el estado
+            state.value = {
+                ...state.value,
+                items: itemsUpdated,
+                total,
+                updateAt: new Date().toLocaleString(),
+            };
+        },
         clearCart: (state) => {
             state.value.items = [];
             state.value.total = 0;
+            state.value.updateAt = new Date().toLocaleString(); // Actualizar la fecha de la última modificación
         },
     }
 });

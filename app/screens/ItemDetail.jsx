@@ -2,10 +2,13 @@ import { Button, Image, StyleSheet, Text, View, useWindowDimensions } from 'reac
 import React, { useEffect, useState } from 'react';
 import { useGetProductByIdQuery } from '../services/shopServices';
 import {addCartItem} from '../features/cart/cartSlice';
+import { useDispatch } from 'react-redux';
+
 const ItemDetail = ({
   route,
   navigation
 }) => {
+  const dispatch = useDispatch();
   const [orientation, setOrientation] = useState("portrait");
   const { width, height } = useWindowDimensions();
 
@@ -18,7 +21,7 @@ const ItemDetail = ({
   }, [width, height]);
 
   const handleAddcart = () => {
-    addCartItem ({...product, quantity:1})
+   dispatch(addCartItem ({...product, quantity:1}))
   }
 
   if (isLoading) {
@@ -66,7 +69,7 @@ const ItemDetail = ({
             <Text>{product.title}</Text>
             <Text>{product.description}</Text>
             <Text style={styles.price}>{product.price}</Text>
-            <Button title="Add to cart" onPress={handleAddcart} />
+            <Button title="Agregar al carrito" onPress={handleAddcart} />
           </View>
         </View>
       ) : (
