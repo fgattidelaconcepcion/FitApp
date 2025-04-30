@@ -1,1 +1,1 @@
-export const baseURL = "https://fitapp-e60f8-default-rtdb.firebaseio.com";
+export const baseURL = "https://fitapp-e60f8-default-rtdb.firebaseio.com"; // recordar guardar en variable de entorno
