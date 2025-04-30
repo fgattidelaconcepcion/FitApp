@@ -4,9 +4,11 @@ import { colors } from '../global/colors'
 
 const Header = ({route}) => {
   const { height, width } = useWindowDimensions();
+  const headerText = typeof route.name === 'string' ? route.name : 'Título Genérico'; // Aseguramos que headerText sea siempre string
+
   return (
     <View style={styles.container}>
-      <Text style={width > 360 ? styles.text : styles.textSm}>{route.name}</Text>
+      <Text style={width > 360 ? styles.text : styles.textSm}>{headerText}</Text>
     </View>
   )
 }
@@ -26,6 +28,6 @@ const styles = StyleSheet.create({
     fontFamily :'Josefin',
     color: colors.text,
     fontSize: 25,
-    
+
   }
 })

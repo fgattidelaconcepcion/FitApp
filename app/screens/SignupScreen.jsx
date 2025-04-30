@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
-import React, {useEffect, useState} from 'react'
+import { StyleSheet, Text, View, Pressable } from 'react-native';
+import React, {useEffect, useState} from 'react';
 import { colors } from '../global/colors';
 import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
 import { useDispatch } from 'react-redux';
 import { useSignUpMutation } from '../services/authService';
 import { signupSchema } from '../validations/authSchema';
-import { setUser } from '../features/User/userSlice';
+import { setUser } from '../features/user/userSlice';
 
 const SignupScreen = ({navigation}) => {
         const [email, setEmail] = useState("");
@@ -16,9 +16,9 @@ const SignupScreen = ({navigation}) => {
         const [confirmPassword, setconfirmPassword] = useState("");
         const [errorConfirmPassword, setErrorConfirmPassword] = useState("");
 
-        const dispatch = useDispatch()
+        const dispatch = useDispatch();
 
-        const [triggerSignUp, result] = useSignUpMutation()
+        const [triggerSignUp, result] = useSignUpMutation();
 
         useEffect(()=>{
             if(result.isSuccess){
@@ -29,28 +29,31 @@ const SignupScreen = ({navigation}) => {
               })
             );
             }
-        },[result])
+        },[result]);
 
         const onSubmit = () => {
             try {
                 setErrorMail("");
-                setErrorPassword("")
-                setErrorConfirmPassword("")
-                signupSchema.validateSync({email, password, confirmPassword})
+                setErrorPassword("");
+                setErrorConfirmPassword("");
+                signupSchema.validateSync({email, password, confirmPassword});
                 triggerSignUp({ email, password, returnSecureToken: true });
             } catch (err) {
-                console.log("entro en el signup del error")
-                console.log(err)
+                console.log("entro en el signup del error");
+                console.log(err);
                 switch (err.path) {
                   case "email":
                     setErrorMail(err.message);
                     break;
-                  case "pasword":
+                  case "password": // <----- ¡Corregido!
                     setErrorPassword(err.message);
+                    break;
+                  case "confirmPassword":
+                    setErrorConfirmPassword(err.message);
                     break;
                 }
             }
-        }
+        };
 
 return (
   <View style={styles.main}>
@@ -77,9 +80,9 @@ return (
     </View>
   </View>
 );
-}
+};
 
-export default SignupScreen
+export default SignupScreen;
 
 const styles = StyleSheet.create({
   main: {

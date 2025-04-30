@@ -14,7 +14,7 @@ export default SubmitButton;
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: colors.background,
+        backgroundColor: colors.secondary,
         borderRadius: 6,
         justifyContent: 'center',
         alignItems: 'center',
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         width: '60%'
     },
     text: {
-        color: colors.primary,
+        color: colors.background,
         fontFamily: 'PlayFair',
         fontSize: 22
     },

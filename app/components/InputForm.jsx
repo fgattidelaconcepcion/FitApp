@@ -1,39 +1,40 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
-import React, { useState } from 'react'
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import React, { useState } from 'react';
 import { colors } from '../global/colors';
 
 const InputForm = ({
-    label, 
-    onChange, 
+    label,
+    onChange,
     error = "",
-    isSecure = false
+    isSecure = false,
+    value,
 }) => {
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState(value || "");
     const onChangeText = (text) => {
-        setInput(text)
-        onChange(text)
-    }
-  return (
-    <View style={styles.inputContainer}>
-      <Text style={styles.subtitle}>{label}</Text>
-      <TextInput
-        style ={styles.input}
-        value={input}
-        onChangeText={onChangeText}
-        secureTextEntry={isSecure}
-      />
-      {error ? 
-        <Text style = {styles.error}>
-            {error}
-        </Text>
-        :
-        null
-    }
-    </View>
-  )
-}
+        setInput(text);
+        onChange(text);
+    };
+    return (
+        <View style={styles.inputContainer}>
+            <Text style={styles.subtitle}>{label}</Text>
+            <TextInput
+                style={styles.input}
+                value={input}
+                onChangeText={onChangeText}
+                secureTextEntry={isSecure}
+            />
+            {error ?
+                <Text style={styles.error}>
+                    {error}
+                </Text>
+                :
+                null
+            }
+        </View>
+    );
+};
 
-export default InputForm
+export default InputForm;
 
 const styles = StyleSheet.create({
     inputContainer: {
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Josefin'
     },
     error: {
-        paddintTop: 2,
+        paddingTop: 2,
         fontSize: 16,
         color: 'red',
         fontFamily: 'Josefin',
@@ -63,4 +64,4 @@ const styles = StyleSheet.create({
         fontFamily: 'Josefin',
         fontSize: 14,
     }
-})
+});
