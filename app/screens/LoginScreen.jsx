@@ -5,25 +5,36 @@ import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
 import { useDispatch } from 'react-redux';
 import { useSignInMutation } from '../services/authService';
+import { setUser } from '../features/user/userSlice'; // Importa la acción setUser
+import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
 
-const LoginScreen = ({ navigation }) => {
-    const [email, setEmail] = useState(''); // Inicializa el estado con strings vacíos
+const LoginScreen = () => {
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const dispatch = useDispatch();
-    const [triggerSignIn, result] = useSignInMutation(); // Cambié 'restul' a 'result' (error tipográfico común)
+    const [triggerSignIn, result] = useSignInMutation();
+    const navigation = useNavigation(); // Obtén el objeto navigation
 
     const onSubmit = async () => {
-        // Aquí llamamos a la mutación para iniciar sesión
+
         try {
             const signInResult = await triggerSignIn({ email, password });
-            // Aquí puedes manejar el resultado de la mutación (por ejemplo, guardar el token, navegar, mostrar errores)
+
             if (signInResult?.data?.token) {
                 console.log('Inicio de sesión exitoso:', signInResult.data);
-                // TODO: Guardar el token en Redux o AsyncStorage y navegar a la siguiente pantalla
+                // **Despacha la acción setUser para actualizar el estado de autenticación**
+                dispatch(setUser({
+                    user: signInResult.data.email, // O la información del usuario que necesites
+                    token: signInResult.data.token
+                }));
+                // **La navegación a la siguiente pantalla se maneja en StackNavigator
+                // al detectar el cambio en el estado 'user' de Redux.**
+
             } else if (signInResult?.error) {
                 console.error('Error al iniciar sesión:', signInResult.error);
                 // TODO: Mostrar un mensaje de error al usuario
+
             }
         } catch (error) {
             console.error('Error inesperado al iniciar sesión:', error);
@@ -35,13 +46,13 @@ const LoginScreen = ({ navigation }) => {
         <View style={styles.main}>
             <View style={styles.container}>
                 <Text style={styles.title}>Login to start</Text>
-                <InputForm label={"email"} onChange={setEmail} error={""} value={email} /> {/* Añadí value para controlar el input */}
+                <InputForm label={"email"} onChange={setEmail} error={""} value={email} />
                 <InputForm
                     label={"password"}
                     onChange={setPassword}
                     error={""}
                     isSecure={true}
-                    value={password} 
+                    value={password}
                 />
                 <SubmitButton onPress={onSubmit} title="Send" />
                 <Text style={styles.sub}>Not have an account?</Text>
