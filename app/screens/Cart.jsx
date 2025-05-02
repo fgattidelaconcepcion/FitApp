@@ -32,7 +32,7 @@ const CartScreen = () => {
       />
       <View style={styles.totalContainer}>
         <Pressable onPress={handleClearCart}>
-        <Text style={styles.totalText}>Vaciar carrtio - Total a pagar: ${total}</Text>
+        <Text style={styles.totalText}>Vaciar carrito - Total a pagar: ${total}</Text>
         </Pressable>
       </View>
     </View>

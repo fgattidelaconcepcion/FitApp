@@ -45,19 +45,19 @@ const LoginScreen = () => {
     return (
         <View style={styles.main}>
             <View style={styles.container}>
-                <Text style={styles.title}>Login to start</Text>
-                <InputForm label={"email"} onChange={setEmail} error={""} value={email} />
+                <Text style={styles.title}>Inicio de sesión</Text>
+                <InputForm label={"Mail"} onChange={setEmail} error={""} value={email} />
                 <InputForm
-                    label={"password"}
+                    label={"Contraseña"}
                     onChange={setPassword}
                     error={""}
                     isSecure={true}
                     value={password}
                 />
-                <SubmitButton onPress={onSubmit} title="Send" />
-                <Text style={styles.sub}>Not have an account?</Text>
+                <SubmitButton onPress={onSubmit} title="Aceptar" />
+                <Text style={styles.sub}>No tienes una cuenta?</Text>
                 <Pressable onPress={() => navigation.navigate("Signup")}>
-                    <Text style={styles.subLink}>Sign up</Text>
+                    <Text style={styles.subLink}>Registrarse</Text>
                 </Pressable>
             </View>
         </View>

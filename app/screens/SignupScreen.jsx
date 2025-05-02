@@ -55,24 +55,24 @@ const SignupScreen = ({navigation}) => {
 return (
   <View style={styles.main}>
     <View style={styles.container}>
-      <Text style={styles.title}>Signup</Text>
-      <InputForm label={"email"} onChange={setEmail} error={errorMail} />
+      <Text style={styles.title}>Registro</Text>
+      <InputForm label={"Mail"} onChange={setEmail} error={errorMail} />
       <InputForm
-        label={"password"}
+        label={"Contraseña"}
         onChange={setPassword}
         error={errorPassword}
         isSecure={true}
       />
       <InputForm
-        label={"confirm password"}
+        label={"Confirmar contraseña"}
         onChange={setconfirmPassword}
         error={errorConfirmPassword}
         isSecure={true}
       />
-      <SubmitButton onPress={onSubmit} title="Send" />
-      <Text style={styles.sub}>Already have an account?</Text>
+      <SubmitButton onPress={onSubmit} title="Aceptar" />
+      <Text style={styles.sub}>¿Ya tienes una cuenta?</Text>
       <Pressable onPress={() => navigation.navigate("Login")}>
-        <Text style={styles.subLink}>Login</Text>
+        <Text style={styles.subLink}>Inicio de sesión</Text>
       </Pressable>
     </View>
   </View>
