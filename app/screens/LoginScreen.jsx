@@ -19,14 +19,14 @@ const LoginScreen = () => {
     const onSubmit = async () => {
 
         try {
-            const signInResult = await triggerSignIn({ email, password });
+            const signInResult = await triggerSignIn({ email, password, returnSecureToken: true }); // Asegúrate de solicitar el token
 
-            if (signInResult?.data?.token) {
+            if (signInResult?.data?.idToken) { // Utiliza idToken aquí
                 console.log('Inicio de sesión exitoso:', signInResult.data);
                 // **Despacha la acción setUser para actualizar el estado de autenticación**
                 dispatch(setUser({
                     user: signInResult.data.email, // O la información del usuario que necesites
-                    token: signInResult.data.token
+                    token: signInResult.data.idToken // Utiliza signInResult.data.idToken
                 }));
                 // **La navegación a la siguiente pantalla se maneja en StackNavigator
                 // al detectar el cambio en el estado 'user' de Redux.**
