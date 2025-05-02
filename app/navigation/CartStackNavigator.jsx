@@ -12,7 +12,7 @@ const CartStackNavigator = () => {
         headerShown: false, // Desactiva el header de la pila
       }}
     >
-      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen name="Carrito" component={Cart} />
     </Stack.Navigator>
   );
 };

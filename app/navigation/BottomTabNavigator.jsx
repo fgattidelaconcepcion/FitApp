@@ -27,7 +27,7 @@ const BottomTabNavigator = () => {
       })}
     >
       <Tab.Screen
-        name="HomeStackNavigator"
+        name="FitApp"
         component={HomeStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -44,7 +44,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Cart"
+        name="Carrito"
         component={CartStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -59,7 +59,7 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Orders"
+        name="Ordenes"
         component={OrderStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {

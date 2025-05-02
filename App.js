@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { SafeAreaView, StyleSheet, Platform, StatusBar } from 'react-native';
 import StackNavigator from './app/navigation/StackNavigator';
@@ -6,7 +5,7 @@ import { useFonts } from 'expo-font';
 import { colors } from './app/global/colors';
 import store from './app/store';
 import { Provider } from "react-redux";
-import { Text } from 'react-native'; // Importa Text si no lo has hecho
+import { Text } from 'react-native'; 
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
