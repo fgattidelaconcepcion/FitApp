@@ -2,7 +2,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { baseURL } from "../databases/realtimedatabase";
 
 export const shopApi = createApi({
+    reducerPath: "shopApi",
     baseQuery: fetchBaseQuery({baseUrl: baseURL}),
+    tagTypes:['profileImageGet'],
     endpoints: ( builder )=> ({
         getCategories: builder.query({
             query: () => 'categories.json',
@@ -22,8 +24,29 @@ export const shopApi = createApi({
                 if(responseTransformed.length) return responseTransformed[0]
                 return null
             }
-        })
+        }),
+        postOrder: builder.mutation({}),
+        getProfileImage: builder.query({
+            query: (localId) => `profileImages/${localId}.json`,
+            providesTags:['profileImageGet']
+         }),
+         postProfileImage : builder.mutation({
+            query: (image, localId)=>({
+                url:`profileImages/${localId}.json`,
+                method:'PUT',
+                body:{
+                      image
+                }
+            })
+         }),
+         invalidatesTags: ['profileImageGet']
     })
 })
 
-export const {useGetCategoriesQuery, useGetProductsByCategoryQuery, useGetProductByIdQuery} = shopApi;
+export const {
+    useGetCategoriesQuery,
+     useGetProductsByCategoryQuery, 
+     useGetProductByIdQuery,
+     usePostOrderMutation,
+     useGetProfileImageQuery,
+     usePostProfileImageMutation } = shopApi;
