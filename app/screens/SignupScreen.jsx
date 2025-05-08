@@ -22,12 +22,14 @@ const SignupScreen = ({navigation}) => {
 
         useEffect(()=>{
             if(result.isSuccess){
-            dispatch(
-              setUser({
-                email: result.data.email,
-                idToken: result.data.idToken,
-              })
-            );
+              dispatch(
+                setUser({
+                  user: result.data.email,
+                  token: result.data.idToken,
+                  localId: result.data.localId,
+                })
+              );
+              
             }
         },[result])
 

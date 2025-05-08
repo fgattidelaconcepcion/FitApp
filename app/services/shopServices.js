@@ -30,16 +30,14 @@ export const shopApi = createApi({
             query: (localId) => `profileImages/${localId}.json`,
             providesTags:['profileImageGet']
          }),
-         postProfileImage : builder.mutation({
-            query: (image, localId)=>({
-                url:`profileImages/${localId}.json`,
-                method:'PUT',
-                body:{
-                      image
-                }
-            })
-         }),
-         invalidatesTags: ['profileImageGet']
+         postProfileImage: builder.mutation({
+            query: ({ image, localId }) => ({
+              url: `profileImages/${localId}.json`,
+              method: 'PUT',
+              body: { image },
+            }),
+            invalidatesTags: ['profileImageGet'], // Esto debe estar dentro de la mutación
+          }),
     })
 })
 

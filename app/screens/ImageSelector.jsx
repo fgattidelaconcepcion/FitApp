@@ -56,7 +56,8 @@ const ImageSelector = () => {
             type: 'image/jpeg', // Asegúrate de que el tipo sea correcto
         });
 
-        await triggerPostImage(formData);
+        await triggerPostImage({ image, localId });
+
     };
 
     return (
