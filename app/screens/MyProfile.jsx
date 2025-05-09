@@ -8,7 +8,13 @@ const {imageCamera, localId} = useSelector(state => state.auth.value)
 const {data: imageFromBase} = useGetProfileImageQuery(localId)
     const launchCamera = () => {
         navigation.navigate('ImageSelector'); // Corregido el nombre de la pantalla
-    }
+        };
+
+        const launchLocation = () => {
+          navigation.navigate("List Address");
+    };
+    const signOut = () => { }
+
   return (
     <View style={styles.container}>
         {imageFromBase || imageCamera ?
@@ -28,7 +34,9 @@ const {data: imageFromBase} = useGetProfileImageQuery(localId)
           />
         )}
 
-     <Button title ='Agregar foto de perfil' onPress={launchCamera}></Button> 
+     <Button title ='Agregar foto de perfil' onPress={launchCamera}></Button>
+     <Button title="My address" onPress={launchLocation} /> 
+     <Button title="Sign out" onPress={signOut} />
     </View>
   );
 };

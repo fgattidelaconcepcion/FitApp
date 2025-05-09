@@ -2,7 +2,10 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MyProfile from '../screens/MyProfile';
 import ImageSelector from '../screens/ImageSelector';
-import { StyleSheet } from 'react-native'; // <--- IMPORTACIÓN FALTANTE
+import { StyleSheet } from 'react-native'; 
+import ListAddress from '../screens/ListAddress';
+import LocationSelector from '../screens/LocationSelector';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +19,8 @@ const MyProfileStackNavigator = () => {
     >
       <Stack.Screen name="MyProfile" component={MyProfile} />
       <Stack.Screen name="ImageSelector" component={ImageSelector} />
+      <Stack.Screen name="List Address" component={ListAddress} />
+      <Stack.Screen name="Location Selector" component={LocationSelector} />
     </Stack.Navigator>
   );
 };
