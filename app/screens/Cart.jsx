@@ -1,13 +1,16 @@
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import CartItem from '../components/CartItem'
-import { useDispatch, useSelector } from 'react-redux'
-import {removeCartItem, clearCart} from  '../features/cart/cartSlice';
-import { colors } from '../global/colors'
+import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import CartItem from '../components/CartItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeCartItem, clearCart } from '../features/cart/cartSlice';
+import { usePostOrderMutation } from '../services/shopServices';
+import { colors } from '../global/colors';
 
 const CartScreen = () => {
   const dispatch = useDispatch();
-  const {items : CartData , total} = useSelector((state)=>state.cart.value)
+  const { items: CartData, total } = useSelector((state) => state.cart.value);
+  const { localId } = useSelector((state) => state.auth.value);
+  const [triggerPostOrder, result] = usePostOrderMutation();
 
   const handleRemoveItem = (id) => {
     dispatch(removeCartItem(id));
@@ -17,50 +20,57 @@ const CartScreen = () => {
     dispatch(clearCart());
   };
 
+  const onConfirmOrder = () => {
+    const timestamp = new Date().getTime(); // Obtiene el timestamp actual
+    triggerPostOrder({ items: CartData, user: localId, total, createdAt: timestamp }); // Incluye createdAt
+    dispatch(clearCart()); // Limpia el carrito después de la orden
+  };
+
   return (
-    <View style={styles.contaier}>
-      <FlatList 
+    <View style={styles.container}>
+      <FlatList
         data={CartData}
-        keyExtractor={product => product.id}
-        renderItem={({item})=>{
-          return (
-            <CartItem 
-              cartItem={item} onRemove={handleRemoveItem}
-            />
-          )
-        }}
+        keyExtractor={(product) => product.id.toString()}
+        renderItem={({ item }) => (
+          <CartItem cartItem={item} onRemove={handleRemoveItem} />
+        )}
       />
       <View style={styles.totalContainer}>
+        <Pressable onPress={onConfirmOrder}>
+          <Text style={styles.totalText}>Confirmar compra: ${total}</Text>
+        </Pressable>
+      </View>
+      <View style={styles.totalContainer}>
         <Pressable onPress={handleClearCart}>
-        <Text style={styles.totalText}>Vaciar carrito - Total a pagar: ${total}</Text>
+          <Text style={styles.totalText}>Vaciar carrito - Total a pagar: ${total}</Text>
         </Pressable>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default CartScreen 
+export default CartScreen;
 
 const styles = StyleSheet.create({
-  contaier: {
+  container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
     marginBottom: 100,
   },
   totalContainer: {
     height: 100,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   clearButton: {
     backgroundColor: colors.primary,
-    padding : 12,
-    borderRadius:8,
+    padding: 12,
+    borderRadius: 8,
   },
-  totalText:{
-    color:colors.primary,
+  totalText: {
+    color: colors.primary,
     fontWeight: 'bold',
     fontSize: 16,
-  }
+  },
 });

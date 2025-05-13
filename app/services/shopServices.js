@@ -4,7 +4,7 @@ import { baseURL } from "../databases/realtimedatabase";
 export const shopApi = createApi({
     reducerPath: "shopApi",
     baseQuery: fetchBaseQuery({baseUrl: baseURL}),
-    tagTypes:["profileImageGet", "locationGet"],
+    tagTypes:["profileImageGet", "locationGet","getOrders"],
     endpoints: ( builder )=> ({
         getCategories: builder.query({
             query: () => 'categories.json',
@@ -25,11 +25,26 @@ export const shopApi = createApi({
                 return null
             }
         }),
-        postOrder: builder.mutation({}),
+
+
+        postOrder: builder.mutation({
+          query: ({ ...order }) => ({
+            url: "orders.json",
+            method: "POST",
+            body: order,
+          }),
+          invalidatesTags: ["getOrders"],
+        }),
+        getOrders: builder.query({
+          query: () => `orders.json?`,
+          providesTags: ["getOrders"],
+        }),
+
         getProfileImage: builder.query({
             query: (localId) => `profileImages/${localId}.json`,
             providesTags:['profileImageGet']
          }),
+
          postProfileImage: builder.mutation({
             query: ({ image, localId }) => ({
               url: `profileImages/${localId}.json`,
@@ -38,10 +53,12 @@ export const shopApi = createApi({
             }),
             invalidatesTags: ['profileImageGet'], // Esto debe estar dentro de la mutación
           }),
+
           getLocation: builder.query({
             query: (localId) => `locations/${localId}.json`,
             providesTags: ["locationGet"],
           }),
+
           postLocation: builder.mutation({
             query: ({ location, localId }) => ({
               url: `locations/${localId}.json`,
@@ -63,6 +80,7 @@ export const {
      useGetProductsByCategoryQuery, 
      useGetProductByIdQuery,
      usePostOrderMutation,
+     useGetOrdersQuery,
      useGetProfileImageQuery,
      usePostProfileImageMutation,
      useGetLocationQuery,

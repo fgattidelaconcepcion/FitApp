@@ -14,12 +14,13 @@ export const authSlice = createSlice({
         setUser: (state, { payload }) => {
             state.value.user = payload.user;
             state.value.token = payload.token;
+            state.value.localId = payload.localId; // Guarda el localId aquí
         },
-        clearUser: (state) => { // Implementación de clearUser
+        clearUser: (state) => {
             state.value.user = null;
             state.value.token = null;
-            state.value.localId = null; // Resetea también localId, si es necesario
-            state.value.imageCamera = null; // Resetea imageCamera
+            state.value.localId = null;
+            state.value.imageCamera = null;
         }
     }
 });
