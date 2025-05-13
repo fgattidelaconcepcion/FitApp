@@ -1,19 +1,35 @@
 import { Image, StyleSheet, Text, View, Button } from 'react-native';
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useGetProfileImageQuery } from '../services/shopServices';
+import { useDB } from '../hooks/useDB';
+import { clearUser } from '../features/user/userSlice'
+
 
 const MyProfile = ({navigation}) => {
 const {imageCamera, localId} = useSelector(state => state.auth.value)
 const {data: imageFromBase} = useGetProfileImageQuery(localId)
+const { truncateSessionTable } = useDB();
+const dispatch = useDispatch()
+
     const launchCamera = () => {
-        navigation.navigate('ImageSelector'); // Corregido el nombre de la pantalla
+        navigation.navigate('ImageSelector'); 
         };
 
         const launchLocation = () => {
           navigation.navigate("List Address");
     };
-    const signOut = () => { }
+    
+    const signOut = async () => { 
+      try {
+        const response = await truncateSessionTable();
+        console.log("Session table truncated", response)
+        dispatch(clearUser())
+
+      }catch(err){
+        console.log(err)
+      }
+    }
 
   return (
     <View style={styles.container}>

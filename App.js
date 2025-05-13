@@ -6,12 +6,19 @@ import { colors } from './app/global/colors';
 import store from './app/store';
 import { Provider } from "react-redux";
 import { Text } from 'react-native'; 
+import { useEffect } from "react";
+import { useDB} from "./app/hooks/useDB";
 
 export default function App() {
+  const {initDB} = useDB()
   const [fontsLoaded, fontError] = useFonts({
     Josefin: require('./assets/JosefinSlab-BoldItalic.ttf'),
     JosefinSans: require('./assets/JosefinSans-Regular.ttf'),
   });
+
+  useEffect(()=>{
+    initDB()
+  }, [])
 
   if (fontError) return <Text>Error cargando fuente</Text>;
   if (!fontsLoaded) return null;
