@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { colors } from '../global/colors';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Importa useEffect
 import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
 import { useDispatch } from 'react-redux';
 import { useSignInMutation } from '../services/authService';
 import { setUser } from '../features/user/userSlice'; // Importa la acción setUser
 import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
+import { useDB } from '../hooks/useDB';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
@@ -16,6 +17,30 @@ const LoginScreen = () => {
     const [triggerSignIn, result] = useSignInMutation();
     const navigation = useNavigation(); // Obtén el objeto navigation
 
+    const {insertSession} = useDB()
+    useEffect(() => {
+        if (result.isSuccess) {
+          (async ()=>{
+            try {
+              await insertSession({
+                localId: result.data.localId,
+                email: result.data.email,
+                token: result.data.idToken,
+              })
+              console.log("Session created", result.data)
+            dispatch(
+            setUser({
+              email: result.data.email,
+              idToken: result.data.idToken,
+              localId: result.data.localId,
+            })
+          );
+            }catch(err){
+              console.log(err)
+            }
+          })()
+        }
+      }, [result]);
     const onSubmit = async () => {
 
         try {
@@ -29,7 +54,7 @@ const LoginScreen = () => {
                     token: signInResult.data.idToken,
                     localId: signInResult.data.localId,
                   }));
-                  
+
                 // **La navegación a la siguiente pantalla se maneja en StackNavigator
                 // al detectar el cambio en el estado 'user' de Redux.**
 

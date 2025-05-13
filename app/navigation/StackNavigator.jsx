@@ -7,29 +7,28 @@ import { useSelector, useDispatch } from 'react-redux'; // Importa useDispatch
 import { setUser } from '../features/user/userSlice';
 
 const StackNavigator = () => {
+  const dispatch = useDispatch(); // Usa useDispatch para obtener la función dispatch
   const { user } = useSelector(state => state.auth.value);
   const { getSession } = useDB();
-  const dispatch = useDispatch(); // Usa useDispatch para obtener la función dispatch
-
-  useEffect(() => {
-    (async () => {
+  
+  useEffect(()=>{
+    (async ()=>{
       try {
-        const response = await getSession();
-        if (response) {
-          const userData = response; // Cambié el nombre de la variable para evitar confusiones
+        const response = await getSession()
+        if(response){
+          const user = response;
           dispatch(
             setUser({
-              email: userData.email,
-              localId: userData.localId,
-              idToken: userData.token,
-            })
-          );
+              email: user.email,
+              localId: user.localId,
+              idToken: user.token
+            }))         
         }
-      } catch (err) {
-        console.log(err);
+      } catch (err){
+        console.log(err)
       }
-    })();
-  }, [user, dispatch]); // Agregué dispatch a las dependencias del useEffect
+    })()
+  }, [user])
 
   return (
     <NavigationContainer>
