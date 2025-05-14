@@ -14,7 +14,7 @@ export const authSlice = createSlice({
         setUser: (state, { payload }) => {
             state.value.user = payload.user;
             state.value.token = payload.token;
-            state.value.localId = payload.localId; // Guarda el localId aquí
+            state.value.localId = payload.localId;
         },
         clearUser: (state) => {
             state.value.user = null;

@@ -3,33 +3,37 @@ import React, { useEffect } from 'react';
 import BottomTabNavigator from './BottomTabNavigator';
 import AuthStackNavigator from './AuthStackNavigator';
 import { useDB } from '../hooks/useDB';
-import { useSelector, useDispatch } from 'react-redux'; // Importa useDispatch
+import { useSelector, useDispatch } from 'react-redux'; 
 import { setUser } from '../features/user/userSlice';
 
 const StackNavigator = () => {
-  const dispatch = useDispatch(); // Usa useDispatch para obtener la función dispatch
+  const dispatch = useDispatch(); 
   const { user } = useSelector(state => state.auth.value);
   const { getSession } = useDB();
   
-  useEffect(()=>{
-    (async ()=>{
+  useEffect(() => {
+    const restoreSession = async () => {
       try {
-        const response = await getSession()
-        if(response){
-          const user = response;
+        const session = await getSession();
+        if (session) {
+          console.log("Session retrieved from DB:", session);
           dispatch(
             setUser({
-              email: user.email,
-              localId: user.localId,
-              idToken: user.token
-            }))         
+              user: session.email,
+              token: session.token,
+              localId: session.localId,
+            })
+          );
+        } else {
+          console.log("No session found in DB");
         }
-      } catch (err){
-        console.log(err)
+      } catch (err) {
+        console.log("Error retrieving session:", err);
       }
-    })()
-  }, [user])
-
+    };
+  
+    restoreSession();
+  }, []); 
   return (
     <NavigationContainer>
       {!user ? <AuthStackNavigator /> : <BottomTabNavigator />}

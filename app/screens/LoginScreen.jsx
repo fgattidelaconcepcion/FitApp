@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { colors } from '../global/colors';
-import React, { useState, useEffect } from "react"; // Importa useEffect
+import React, { useState, useEffect } from "react"; 
 import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
 import { useDispatch } from 'react-redux';
 import { useSignInMutation } from '../services/authService';
-import { setUser } from '../features/user/userSlice'; // Importa la acción setUser
-import { useNavigation } from '@react-navigation/native'; // Importa useNavigation
+import { setUser } from '../features/user/userSlice'; 
+import { useNavigation } from '@react-navigation/native'; 
 import { useDB } from '../hooks/useDB';
 
 const LoginScreen = () => {
@@ -15,58 +15,69 @@ const LoginScreen = () => {
 
     const dispatch = useDispatch();
     const [triggerSignIn, result] = useSignInMutation();
-    const navigation = useNavigation(); // Obtén el objeto navigation
+    const navigation = useNavigation(); 
 
-    const {insertSession} = useDB()
+    const { insertSession } = useDB();
+
     useEffect(() => {
         if (result.isSuccess) {
-          (async ()=>{
+          (async () => {
             try {
               await insertSession({
                 localId: result.data.localId,
                 email: result.data.email,
                 token: result.data.idToken,
-              })
-              console.log("Session created", result.data)
-            dispatch(
+              });
+              console.log("Session created:", result.data);
+              dispatch(
+                setUser({
+                  email: result.data.email,
+                  idToken: result.data.idToken,
+                  localId: result.data.localId,
+                })
+              );
+            } catch (err) {
+              console.log("Error inserting session:", err);
+            }
+          })();
+        }
+    }, [result]);
+
+    const onSubmit = async () => {
+      try {
+        const signInResult = await triggerSignIn({
+          email,
+          password,
+          returnSecureToken: true,
+        });
+    
+        if (signInResult?.data?.idToken) {
+          const { localId, email, idToken } = signInResult.data;
+    
+          console.log('Inicio de sesión exitoso:', signInResult.data);
+    
+          //Guardar sesión en SQLite
+          await insertSession({
+            localId,
+            email,
+            token: idToken,
+          });
+    
+          // Guardar en Redux
+          dispatch(
             setUser({
-              email: result.data.email,
-              idToken: result.data.idToken,
-              localId: result.data.localId,
+              user: email,
+              token: idToken,
+              localId: localId,
             })
           );
-            }catch(err){
-              console.log(err)
-            }
-          })()
+        } else if (signInResult?.error) {
+          console.error('Error al iniciar sesión:', signInResult.error);
+          
         }
-      }, [result]);
-    const onSubmit = async () => {
-
-        try {
-            const signInResult = await triggerSignIn({ email, password, returnSecureToken: true }); // Asegúrate de solicitar el token
-
-            if (signInResult?.data?.idToken) { // Utiliza idToken aquí
-                console.log('Inicio de sesión exitoso:', signInResult.data);
-                // **Despacha la acción setUser para actualizar el estado de autenticación**
-                dispatch(setUser({
-                    user: signInResult.data.email,
-                    token: signInResult.data.idToken,
-                    localId: signInResult.data.localId,
-                  }));
-
-                // **La navegación a la siguiente pantalla se maneja en StackNavigator
-                // al detectar el cambio en el estado 'user' de Redux.**
-
-            } else if (signInResult?.error) {
-                console.error('Error al iniciar sesión:', signInResult.error);
-                // TODO: Mostrar un mensaje de error al usuario
-
-            }
-        } catch (error) {
-            console.error('Error inesperado al iniciar sesión:', error);
-            // TODO: Manejar el error inesperado
-        }
+      } catch (error) {
+        console.error('Error inesperado al iniciar sesión:', error);
+      }
     };
 
     return (
