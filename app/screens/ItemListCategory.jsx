@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
-//import products from "../data/products.json"
 import Search from '../components/Search'
 import ProductItem from '../components/ProductItem'
 import { useGetProductsByCategoryQuery } from '../services/shopServices';

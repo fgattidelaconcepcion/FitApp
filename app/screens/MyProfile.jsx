@@ -51,8 +51,8 @@ const dispatch = useDispatch()
         )}
 
      <Button title ='Agregar foto de perfil' onPress={launchCamera}></Button>
-     <Button title="My address" onPress={launchLocation} /> 
-     <Button title="Sign out" onPress={signOut} />
+     <Button title="Mi ubicación " onPress={launchLocation} /> 
+     <Button title="Cerrar sesión" onPress={signOut} />
     </View>
   );
 };
