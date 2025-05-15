@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { useSignInMutation } from '../services/authService';
 import { setUser } from '../features/user/userSlice'; 
 import { useNavigation } from '@react-navigation/native'; 
-import { useDB } from '../hooks/useDB';
+import { useSession } from '../hooks/useSession';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
@@ -17,7 +17,8 @@ const LoginScreen = () => {
     const [triggerSignIn, result] = useSignInMutation();
     const navigation = useNavigation(); 
 
-    const { insertSession } = useDB();
+   
+    const {insertSession} = useSession()
 
     useEffect(() => {
         if (result.isSuccess) {

@@ -7,10 +7,12 @@ import store from './app/store';
 import { Provider } from "react-redux";
 import { Text } from 'react-native'; 
 import { useEffect } from "react";
-import { useDB} from "./app/hooks/useDB";
+import { useSession } from "./app/hooks/useSession";
+
 
 export default function App() {
-  const {initDB} = useDB()
+
+  const {initDB} = useSession()
   const [fontsLoaded, fontError] = useFonts({
     Josefin: require('./assets/JosefinSlab-BoldItalic.ttf'),
     JosefinSans: require('./assets/JosefinSans-Regular.ttf'),

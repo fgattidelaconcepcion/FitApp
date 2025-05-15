@@ -2,14 +2,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import BottomTabNavigator from './BottomTabNavigator';
 import AuthStackNavigator from './AuthStackNavigator';
-import { useDB } from '../hooks/useDB';
 import { useSelector, useDispatch } from 'react-redux'; 
 import { setUser } from '../features/user/userSlice';
+import { useSession } from '../hooks/useSession';
 
 const StackNavigator = () => {
   const dispatch = useDispatch(); 
   const { user } = useSelector(state => state.auth.value);
-  const { getSession } = useDB();
+  const {getSession} = useSession()
+  
   
   useEffect(() => {
     const restoreSession = async () => {
