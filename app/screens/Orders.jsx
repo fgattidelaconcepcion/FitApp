@@ -1,18 +1,18 @@
-import { FlatList, StyleSheet, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import OrderItem from '../components/OrderItem'
-import { useSelector } from 'react-redux'
-import { useGetOrdersQuery } from '../services/shopServices'
+import { FlatList, StyleSheet, View, Animated, ActivityIndicator } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import OrderItem from '../components/OrderItem';
+import { useSelector } from 'react-redux';
+import { useGetOrdersQuery } from '../services/shopServices';
 
-const Orders= () => {
-  const {localId} = useSelector( state => state.auth.value)
-  const {data: orders, isSuccess} = useGetOrdersQuery()
-  const [ordersFiltered, setOrdersFiltered] = useState([]) // Inicializa como un array vacío
+const Orders = () => {
+  const { localId } = useSelector((state) => state.auth.value);
+  const { data: orders, isSuccess, isLoading } = useGetOrdersQuery();
+  const [ordersFiltered, setOrdersFiltered] = useState([]);
 
   useEffect(() => {
     if (isSuccess && orders) {
       const responseTransformed = Object.entries(orders).map(([key, value]) => ({
-        id: key, // Usa la clave de Firebase como ID único
+        id: key,
         ...value,
       }));
       const ordersToFilter = responseTransformed.filter(
@@ -22,19 +22,32 @@ const Orders= () => {
     }
   }, [orders, isSuccess, localId]);
 
+  if (isLoading) {
+    return <ActivityIndicator size="large" color="blue" />;
+  }
+
   return (
-    <View>
-      <FlatList
-        data={ordersFiltered}
-        keyExtractor={(item) => item.id} // Usa el ID único del item como key
-        renderItem={({ item }) => (
-          <OrderItem order={item} />
-        )}
-      />
-    </View>
+    <FlatList
+      data={ordersFiltered}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item, index }) => {
+        const translateX = new Animated.Value(300); // Comienza fuera de la pantalla
+        Animated.timing(translateX, {
+          toValue: 0,
+          duration: 500,
+          useNativeDriver: true,
+        }).start();
+
+        return (
+          <Animated.View style={{ transform: [{ translateX }] }}>
+            <OrderItem order={item} />
+          </Animated.View>
+        );
+      }}
+    />
   );
-}
+};
 
-export default Orders
+export default Orders;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

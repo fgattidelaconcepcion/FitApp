@@ -1,5 +1,5 @@
-import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import { FlatList, Pressable, StyleSheet, Text, View, Animated } from 'react-native';
+import React, { useState } from 'react';
 import CartItem from '../components/CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeCartItem, clearCart } from '../features/cart/cartSlice';
@@ -21,9 +21,27 @@ const CartScreen = () => {
   };
 
   const onConfirmOrder = () => {
-    const timestamp = new Date().getTime(); // Obtiene el timestamp actual
-    triggerPostOrder({ items: CartData, user: localId, total, createdAt: timestamp }); // Incluye createdAt
-    dispatch(clearCart()); // Limpia el carrito después de la orden
+    const timestamp = new Date().getTime();
+    triggerPostOrder({ items: CartData, user: localId, total, createdAt: timestamp });
+    dispatch(clearCart());
+  };
+
+  const [scaleAnim] = useState(new Animated.Value(1));
+
+  const handlePressIn = () => {
+    Animated.spring(scaleAnim, {
+      toValue: 0.95,
+      friction: 2,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const handlePressOut = () => {
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      friction: 2,
+      useNativeDriver: true,
+    }).start();
   };
 
   return (
@@ -36,9 +54,11 @@ const CartScreen = () => {
         )}
       />
       <View style={styles.totalContainer}>
-        <Pressable onPress={onConfirmOrder}>
-          <Text style={styles.totalText}>Confirmar compra: ${total}</Text>
-        </Pressable>
+        <Animated.View style={{ transform: [{ scale: scaleAnim }] }}>
+          <Pressable onPressIn={handlePressIn} onPressOut={handlePressOut} onPress={onConfirmOrder}>
+            <Text style={styles.totalText}>Confirmar compra: ${total}</Text>
+          </Pressable>
+        </Animated.View>
       </View>
       <View style={styles.totalContainer}>
         <Pressable onPress={handleClearCart}>
